@@ -25,8 +25,7 @@ Thumbs.db
 *.swo
 *~
 
-# WordPress (when using Docker)
-plugin/
+# WordPress (when using Docker - but keep plugin source)
 wp-content/
 wp-admin/
 wp-includes/
