@@ -1,16 +1,21 @@
 {
-  "name": "pagifye-scraper",
+  "name": "pagifye-elementor-widgets",
   "version": "1.0.0",
-  "description": "Scraper for Pagifye free Tailwind components",
+  "description": "Pagifye Elementor Widgets - Scraper and Plugin",
   "type": "module",
-  "main": "scraper.js",
+  "main": "scraper/scraper.js",
   "scripts": {
-    "scrape": "node scraper.js"
+    "scrape": "node scraper/scraper.js",
+    "scrape:single": "node scraper/scraper-single.js"
   },
   "keywords": [
     "tailwind",
     "components",
-    "scraper"
+    "scraper",
+    "elementor",
+    "wordpress",
+    "widgets",
+    "pagifye"
   ],
   "author": "",
   "license": "ISC",
