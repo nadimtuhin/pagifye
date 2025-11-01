@@ -6,7 +6,9 @@
   "main": "scraper/scraper.js",
   "scripts": {
     "scrape": "node scraper/scraper.js",
-    "scrape:single": "node scraper/scraper-single.js"
+    "scrape:single": "node scraper/scraper-single.js",
+    "build": "bash scripts/build-plugin.sh",
+    "build:keep": "bash scripts/build-plugin.sh --keep-build"
   },
   "keywords": [
     "tailwind",
