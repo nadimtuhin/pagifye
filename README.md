@@ -269,6 +269,22 @@ See [COMPONENT_LIST.md](COMPONENT_LIST.md) for complete details.
 
 **Total Timeline:** 10 weeks
 
+## Building the Plugin
+
+Create a production-ready WordPress plugin zip file:
+
+```bash
+# Build plugin zip
+npm run build
+
+# Keep build directory for inspection
+npm run build:keep
+```
+
+**Output:** `dist/pagifye-elementor-widgets-{version}.zip`
+
+See [scripts/README.md](scripts/README.md) for detailed build documentation.
+
 ## Contributing
 
 Contributions are welcome! Please read the [documentation](docs/README.md) first.
@@ -277,7 +293,8 @@ Contributions are welcome! Please read the [documentation](docs/README.md) first
 1. Read the relevant documentation
 2. Follow the implementation plans
 3. Test thoroughly
-4. Submit pull request
+4. Build plugin: `npm run build`
+5. Submit pull request
 
 ## License
 
