@@ -1,13 +1,15 @@
 # Pagifye Component Scraper
 
-A Node.js script to download free Tailwind CSS components from Pagifye.com.
+A Node.js scraper to download free Tailwind CSS components from Pagifye.com using Puppeteer.
 
 ## Features
 
-- Downloads free Tailwind CSS component HTML from Pagifye
-- Saves metadata including component names, URLs, and file names
-- Rate-limited to avoid overwhelming the server
-- Multiple scraping methods available
+- Automated component discovery and download using Puppeteer
+- Intercepts API responses to capture component HTML
+- Saves components as individual HTML files
+- Generates metadata.json with scraping details
+- Environment variable configuration for secure credential management
+- Support for both batch and single component downloads
 
 ## Installation
 
@@ -37,32 +39,43 @@ To get your tokens:
 
 ## Usage
 
-### Method 1: API-based Scraper (Recommended - Fast & Reliable)
+### Scrape All Free Components
 
 ```bash
-npm run scrape-api
+npm run scrape
 ```
 
-This method downloads components directly using their URLs. It's faster and doesn't require a headless browser.
+This command runs `scraper.js` which:
+1. Navigates to the Pagifye free components listing page
+2. Automatically discovers all free component slugs
+3. Downloads each component by intercepting the API response when clicking "Copy To Tailwind"
+4. Saves each component as an HTML file in the `./components` directory
+5. Creates a `metadata.json` file with scraping details
 
-**Note:** The component list is manually maintained in `scraper-api.js`. To add more components, update the `FREE_COMPONENTS` array with the component slugs from Pagifye.
-
-### Method 2: Puppeteer-based Scraper (Experimental)
+### Scrape Specific Components
 
 ```bash
-npm run scrape-v2
+node scraper-single.js <slug1> <slug2> ...
 ```
 
-This method uses Puppeteer to handle client-side rendered content. It automatically discovers components but is slower due to browser automation.
+Example:
+```bash
+node scraper-single.js root_navigation-01 root_hero-03
+```
 
-**Note:** Requires Puppeteer installation which downloads Chromium (~200MB).
+This allows you to download specific components by their slugs instead of scraping all components.
 
 ## What Gets Downloaded
 
-Each script will:
-1. Download component HTML pages
-2. Save all components to the `./components` directory
-3. Create a `metadata.json` file with component information
+The scraper will:
+1. Intercept the API response when "Copy To Tailwind" is clicked
+2. Extract the component HTML code from the API response
+3. Save each component as a separate HTML file in the `./components` directory
+4. Generate a `metadata.json` file with:
+   - Scrape date and time
+   - Total number of components downloaded
+   - List of successful downloads with file names
+   - List of failed downloads with error messages
 
 ## Output Structure
 
@@ -80,32 +93,35 @@ components/
 └── metadata.json
 ```
 
-## Adding More Components
+## How It Works
 
-To download additional free components:
+The scraper uses Puppeteer to:
+1. Launch a headless Chrome browser
+2. Set authentication cookies from your `.env` file
+3. Navigate to the Pagifye components listing page
+4. Extract component slugs from the page
+5. For each component:
+   - Navigate to the component page
+   - Set up an API response interceptor
+   - Click the "Copy To Tailwind" button
+   - Capture the API response containing the component HTML
+   - Save the HTML to a file
 
-1. Visit https://pagifye.com/components?type=ui&license=free
-2. Find the component you want (look for FREE badge)
-3. Get the component slug from the URL (e.g., `root_navigation-01`)
-4. Add it to the `FREE_COMPONENTS` array in `scraper-api.js`
-5. Run `npm run scrape-api` again
+## Finding Component Slugs
 
-Example:
-```javascript
-const FREE_COMPONENTS = [
-  'root_navigation-01',
-  'root_hero-01',
-  // Add your new component slugs here
-  'root_footer-01',
-];
-```
+Component slugs can be found in the URL when viewing a component on Pagifye:
+- URL: `https://pagifye.com/components/root_navigation-01`
+- Slug: `root_navigation-01`
+
+You can browse free components at: https://pagifye.com/components?type=ui&license=free
 
 ## Notes
 
-- The scraper includes a 1.5-second delay between requests to be respectful to the server
+- The scraper includes a 1-second delay between component requests
 - Only free components (marked with "FREE" badge) should be downloaded
-- The HTML files contain the full page structure, not just the component code
-- Components are downloaded in "light" mode by default
+- The HTML files contain the component code extracted from the API
+- Requires a valid Pagifye account with active authentication tokens
+- Chrome/Chromium browser is required for Puppeteer
 
 ## Requirements
 
