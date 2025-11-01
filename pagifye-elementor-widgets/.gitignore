@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build files
+build/
+
+# Environment
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Compiled files
+*.css.map
+*.js.map
