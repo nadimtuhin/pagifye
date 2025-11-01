@@ -1,0 +1,19 @@
+{
+    "name": "pagifye/elementor-widgets",
+    "description": "Pagifye Elementor Widgets - Beautiful Tailwind CSS components for Elementor",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pagifye\\ElementorWidgets\\": "includes/",
+            "Pagifye\\ElementorWidgets\\Widgets\\": "widgets/"
+        },
+        "files": [
+            "includes/helpers/sanitization.php",
+            "includes/helpers/utilities.php"
+        ]
+    }
+}
