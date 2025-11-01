@@ -1,0 +1,63 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+README.md
+LICENSE
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.docker
+
+# IDE
+.vscode/
+.idea/
+*.sw*
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# Test files
+tests/
+*.test.js
+*.spec.js
+coverage/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Scraper files (not needed in containers)
+scraper/
+components/
+examples/
+
+# Docker
+docker-compose*.yml
+Dockerfile
+.dockerignore

@@ -1,0 +1,29 @@
+# MySQL Testing Configuration
+# Optimized for speed over durability
+
+[mysqld]
+# Character Set
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+# InnoDB Settings (faster, less durable)
+innodb_buffer_pool_size = 128M
+innodb_log_file_size = 32M
+innodb_flush_log_at_trx_commit = 0
+innodb_doublewrite = 0
+
+# Disable Logging
+skip-log-bin
+slow_query_log = 0
+
+# Max Connections
+max_connections = 100
+
+# Performance Schema (disabled for speed)
+performance_schema = OFF
+
+[mysql]
+default-character-set = utf8mb4
+
+[client]
+default-character-set = utf8mb4
