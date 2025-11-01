@@ -98,12 +98,17 @@ This command runs `scraper.js` which:
 ##### Scrape Specific Components
 
 ```bash
-node scraper-single.js <slug1> <slug2> ...
+npm run scrape:single <slug1> <slug2> ...
+```
+
+Or directly:
+```bash
+node scraper/scraper-single.js <slug1> <slug2> ...
 ```
 
 Example:
 ```bash
-node scraper-single.js root_navigation-01 root_hero-03
+npm run scrape:single root_navigation-01 root_hero-03
 ```
 
 This allows you to download specific components by their slugs instead of scraping all components.
@@ -199,8 +204,10 @@ pagifye/
 │   ├── 01-PLUGIN-ARCHITECTURE.md
 │   ├── 02-PRIORITY-COMPONENTS-SELECTION.md
 │   └── components/         # Widget implementation plans
-├── scraper.js              # Main scraper script
-├── scraper-single.js       # Single component scraper
+├── scraper/                 # Component scraper scripts
+│   ├── scraper.js          # Main scraper (all components)
+│   ├── scraper-single.js   # Single component scraper
+│   └── *.js                # Helper utilities
 └── package.json
 ```
 
