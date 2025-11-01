@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Pagifye Components Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pgfy-gray': {
+              50: '#F5F7F6',
+              400: '#1A2E27',
+              500: '#0F2C24',
+            },
+            'pgfy-primary': {
+              500: '#8FE35F',
+              600: '#7DD44E',
+            },
+            'pgfy-neutral-white': '#E8F0ED',
+          },
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-pgfy-gray-500">
+
+  <!-- Navigation Component (root_navigation-01) -->
+  <section class="min-h-screen">
+    <header class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
+      <div class="container flex items-center lg:justify-between">
+        <a href="landing-page.html">
+          <img src="https://static.pagifye.com/root/images/navbar/root-ui-white-logo.svg" alt="logo">
+        </a>
+
+        <nav>
+          <ul class="flex gap-6 max-lg:hidden">
+            <li><a href="landing-page.html">Home</a></li>
+            <li class="group relative">
+              <a href="#" class="flex items-center gap-1">
+                Product
+                <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 group-hover:rotate-180">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <div class="invisible absolute left-0 top-full z-50 min-w-[200px] rounded-lg p-4 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100 bg-pgfy-gray-400">
+                <ul class="flex flex-col gap-2">
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Overview</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Features</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Solutions</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Integrations</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="team-about-page.html">About</a></li>
+            <li><a href="pricing-page.html">Pricing</a></li>
+            <li><a href="blog-page.html">Blog</a></li>
+          </ul>
+        </nav>
+
+        <div class="flex gap-6 max-lg:hidden">
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+            <span>Sign In</span>
+          </button>
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+            <span>Get Started</span>
+          </button>
+        </div>
+      </div>
+
+      <div x-data="{ isOpen: false }" class="flex lg:hidden">
+        <button class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
+          Get Started
+        </button>
+        <button @click="isOpen = !isOpen" class="relative z-10">
+          <img src="https://static.pagifye.com/root/images/navbar/burger-menu-white.svg" alt="Menu" class="min-h-6 min-w-6 ">
+        </button>
+      </div>
+    </header>
+  </section>
+
+  <!-- Hero Component (root_hero-01) -->
+  <section class="bg-pgfy-gray-500 py-10 md:pb-20 md:pt-16">
+    <div class="container flex items-center gap-10 max-md:flex-col max-md:gap-8">
+      <div class="flex w-1/2 grow flex-col gap-10 max-md:w-full max-md:gap-6">
+        <div class="flex flex-col gap-6 max-md:gap-4">
+          <h1 class="text-6xl font-bold leading-[68px] text-white max-lg:text-[42px] max-lg:leading-[48px]">
+            <span>Driving Success Through</span>
+            <span class="text-pgfy-primary-500">Innovation and Excellence</span>
+          </h1>
+          <p class="text-lg text-pgfy-neutral-white max-md:text-base">
+            Unlock your business's full potential with our innovative SaaS
+            solutions and see the difference we can make.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full !w-auto px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+            <span>Get Started</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+              <path d="M17.5383 10.6635L11.9133 16.2885C11.7372 16.4647 11.4983 16.5636 11.2492 16.5636C11.0001 16.5636 10.7613 16.4647 10.5852 16.2885C10.409 16.1124 10.3101 15.8736 10.3101 15.6245C10.3101 15.3754 10.409 15.1365 10.5852 14.9604L14.6094 10.9378H3.125C2.87636 10.9378 2.6379 10.839 2.46209 10.6632C2.28627 10.4874 2.1875 10.2489 2.1875 10.0003C2.1875 9.75162 2.28627 9.51316 2.46209 9.33735C2.6379 9.16153 2.87636 9.06276 3.125 9.06276H14.6094L10.5867 5.03776C10.4106 4.86164 10.3117 4.62277 10.3117 4.3737C10.3117 4.12462 10.4106 3.88575 10.5867 3.70963C10.7628 3.53351 11.0017 3.43457 11.2508 3.43457C11.4999 3.43457 11.7387 3.53351 11.9148 3.70963L17.5398 9.33463C17.6273 9.42185 17.6966 9.52547 17.7438 9.63955C17.7911 9.75364 17.8153 9.87593 17.8152 9.99941C17.815 10.1229 17.7905 10.2451 17.743 10.3591C17.6955 10.4731 17.6259 10.5765 17.5383 10.6635Z" fill="#0F2C24"></path>
+            </svg>
+          </button>
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full !w-auto px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+            <span>Learn More</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="w-1/2 grow max-md:w-full">
+        <img src="https://static.pagifye.com/root/images/hero/hero1img1.png" alt="Hero_Image" class="w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Component (root_content-02) -->
+  <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container">
+      <div class="flex h-full gap-8 max-md:flex-col-reverse lg:items-center lg:gap-[60px]">
+        <div class="h-max md:sticky md:top-2">
+          <div class="relative flex items-center overflow-hidden rounded-2xl px-4 py-14 md:px-8 lg:min-h-[726px] lg:px-14 bg-pgfy-gray-400">
+            <img class="w-full rounded-full object-cover object-center" src="https://static.pagifye.com/root/images/content/v2office1.png" alt="hero">
+            <img src="https://static.pagifye.com/root/images/content/v2info.png" alt="information" class="absolute bottom-4 left-4 max-w-[126px] sm:bottom-8 sm:left-8 md:max-w-[158px]">
+          </div>
+        </div>
+        <div class="h-full md:w-1/2 text-white">
+          <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] md:mt-4 text-white">
+            <span>Unlock Your Business Potential with</span>
+            <span class="text-pgfy-primary-500">Our Innovative</span>
+            <span>SaaS Tools</span>
+          </h1>
+
+          <ul class="mt-8 space-y-6 lg:mt-10">
+            <li class="flex items-start gap-4">
+              <img src="https://static.pagifye.com/root/images/content/v2light1.svg" alt="Advanced Analytics icon">
+              <div class="space-y-2">
+                <h4 class="text-xl font-bold lg:text-2xl text-white">Advanced Analytics</h4>
+                <p class="text-pgfy-gray-50">
+                  Unlock your business's full potential with our innovative SaaS
+                  solutions and see the difference we can make.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="https://static.pagifye.com/root/images/content/v2light2.svg" alt="Seamless Integrations icon">
+              <div class="space-y-2">
+                <h4 class="text-xl font-bold lg:text-2xl text-white">Seamless Integrations</h4>
+                <p class="text-pgfy-gray-50">
+                  Unlock your business's full potential with our innovative SaaS
+                  solutions and see the difference we can make.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="https://static.pagifye.com/root/images/content/v2light3.svg" alt="User-Friendly Design icon">
+              <div class="space-y-2">
+                <h4 class="text-xl font-bold lg:text-2xl text-white">User-Friendly Design</h4>
+                <p class="text-pgfy-gray-50">
+                  Unlock your business's full potential with our innovative SaaS
+                  solutions and see the difference we can make.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Component (root_metrics-02) -->
+  <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container">
+      <div class="flex flex-wrap justify-between gap-8">
+        <div class="text-center">
+          <h2 class="text-5xl font-bold text-pgfy-primary-500 md:text-6xl">500+</h2>
+          <p class="mt-2 text-lg text-white">Active Users</p>
+        </div>
+        <div class="text-center">
+          <h2 class="text-5xl font-bold text-pgfy-primary-500 md:text-6xl">95%</h2>
+          <p class="mt-2 text-lg text-white">Satisfaction Rate</p>
+        </div>
+        <div class="text-center">
+          <h2 class="text-5xl font-bold text-pgfy-primary-500 md:text-6xl">24/7</h2>
+          <p class="mt-2 text-lg text-white">Customer Support</p>
+        </div>
+        <div class="text-center">
+          <h2 class="text-5xl font-bold text-pgfy-primary-500 md:text-6xl">10+</h2>
+          <p class="mt-2 text-lg text-white">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
