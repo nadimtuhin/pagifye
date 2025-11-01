@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Page - Pagifye Components Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pgfy-gray': {
+              50: '#F5F7F6',
+              400: '#1A2E27',
+              500: '#0F2C24',
+            },
+            'pgfy-primary': {
+              500: '#8FE35F',
+              600: '#7DD44E',
+            },
+            'pgfy-neutral-white': '#E8F0ED',
+            'pgfy-wireframe': {
+              100: '#E8E8E8'
+            }
+          },
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-pgfy-gray-500">
+
+  <!-- Navigation Component (root_navigation-01) -->
+  <section class="min-h-screen">
+    <header class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
+      <div class="container flex items-center lg:justify-between">
+        <a href="landing-page.html">
+          <img src="https://static.pagifye.com/root/images/navbar/root-ui-white-logo.svg" alt="logo">
+        </a>
+
+        <nav>
+          <ul class="flex gap-6 max-lg:hidden">
+            <li><a href="landing-page.html">Home</a></li>
+            <li class="group relative">
+              <a href="#" class="flex items-center gap-1">
+                Product
+                <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 group-hover:rotate-180">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <div class="invisible absolute left-0 top-full z-50 min-w-[200px] rounded-lg p-4 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100 bg-pgfy-gray-400">
+                <ul class="flex flex-col gap-2">
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Overview</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Features</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Solutions</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Integrations</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="team-about-page.html">About</a></li>
+            <li><a href="pricing-page.html">Pricing</a></li>
+            <li><a href="blog-page.html">Blog</a></li>
+          </ul>
+        </nav>
+
+        <div class="flex gap-6 max-lg:hidden">
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+            <span>Sign In</span>
+          </button>
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+            <span>Get Started</span>
+          </button>
+        </div>
+      </div>
+
+      <div x-data="{ isOpen: false }" class="flex lg:hidden">
+        <button class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
+          Get Started
+        </button>
+        <button @click="isOpen = !isOpen" class="relative z-10">
+          <img src="https://static.pagifye.com/root/images/navbar/burger-menu-white.svg" alt="Menu" class="min-h-6 min-w-6 ">
+        </button>
+      </div>
+    </header>
+  </section>
+
+  <!-- Pricing Component (root_pricing-01) -->
+  <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container flex flex-col items-center justify-center gap-6 md:gap-10">
+      <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] mx-auto w-full max-w-[700px] text-center text-white">
+        <span>Plans for </span>
+        <span class="text-pgfy-primary-500">customer-first</span>
+        <span> business of all sizes </span>
+      </h1>
+
+      <div class="flex gap-2 rounded-full bg-pgfy-gray-400 p-1.5 font-bold md:p-2">
+        <button class="cursor-pointer rounded-full px-6 py-1.5 text-white md:py-2">Bill Monthly</button>
+        <button class="cursor-pointer rounded-full bg-pgfy-primary-500 px-6 py-1.5 text-pgfy-gray-500 md:py-2">Bill Annually</button>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-[30px] lg:grid-cols-4">
+        <!-- Starter Plan -->
+        <div class="relative space-y-4 p-5 md:p-[30px] rounded-2xl border-[3px] border-white/10 bg-pgfy-gray-500">
+          <div class="space-y-2">
+            <h5 class="text-2xl font-bold md:text-3xl text-white">Starter</h5>
+            <h6 class="text-4xl font-bold leading-[48px] md:text-5xl md:leading-[56px] text-white">
+              Free<span class="text-base font-normal"> /month</span>
+            </h6>
+            <p class="text-pgfy-gray-50/70">Billed annually, up to 5 seats</p>
+          </div>
+
+          <div class="h-px w-full bg-pgfy-wireframe-100/50"></div>
+
+          <div class="space-y-6">
+            <p class="text-pgfy-gray-50">Maximise reviews impact with tools to drive SEO</p>
+            <button class="flex w-full select-none items-center justify-center gap-1 rounded-full px-8 py-3 text-base font-bold bg-pgfy-gray-400 text-white">
+              <span>Try for free</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5383 10.6635L11.9133 16.2885C11.7372 16.4647 11.4983 16.5636 11.2492 16.5636C11.0001 16.5636 10.7613 16.4647 10.5852 16.2885C10.409 16.1124 10.3101 15.8736 10.3101 15.6245C10.3101 15.3754 10.409 15.1365 10.5852 14.9604L14.6094 10.9378H3.125C2.87636 10.9378 2.6379 10.839 2.46209 10.6632C2.28627 10.4874 2.1875 10.2489 2.1875 10.0003C2.1875 9.75162 2.28627 9.51316 2.46209 9.33735C2.6379 9.16153 2.87636 9.06276 3.125 9.06276H14.6094L10.5867 5.03776C10.4106 4.86164 10.3117 4.62277 10.3117 4.3737C10.3117 4.12462 10.4106 3.88575 10.5867 3.70963C10.7628 3.53351 11.0017 3.43457 11.2508 3.43457C11.4999 3.43457 11.7387 3.53351 11.9148 3.70963L17.5398 9.33463C17.6273 9.42185 17.6966 9.52547 17.7438 9.63955C17.7911 9.75364 17.8153 9.87593 17.8152 9.99941C17.815 10.1229 17.7905 10.2451 17.743 10.3591C17.6955 10.4731 17.6259 10.5765 17.5383 10.6635Z" fill="#FFFFFF"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="relative space-y-4 p-5 md:p-[30px] rounded-2xl border-[3px] border-white/10 bg-pgfy-gray-500">
+          <div class="space-y-2">
+            <h5 class="text-2xl font-bold md:text-3xl text-white">Growth</h5>
+            <h6 class="text-4xl font-bold leading-[48px] md:text-5xl md:leading-[56px] text-white">
+              $19<span class="text-base font-normal"> /month</span>
+            </h6>
+            <p class="text-pgfy-gray-50/70">Billed annually, up to 5 seats</p>
+          </div>
+
+          <div class="h-px w-full bg-pgfy-wireframe-100/50"></div>
+
+          <div class="space-y-6">
+            <p class="text-pgfy-gray-50">Maximise reviews impact with tools to drive SEO</p>
+            <button class="flex w-full select-none items-center justify-center gap-1 rounded-full px-8 py-3 text-base font-bold bg-pgfy-gray-400 text-white">
+              <span>Try for free</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5383 10.6635L11.9133 16.2885C11.7372 16.4647 11.4983 16.5636 11.2492 16.5636C11.0001 16.5636 10.7613 16.4647 10.5852 16.2885C10.409 16.1124 10.3101 15.8736 10.3101 15.6245C10.3101 15.3754 10.409 15.1365 10.5852 14.9604L14.6094 10.9378H3.125C2.87636 10.9378 2.6379 10.839 2.46209 10.6632C2.28627 10.4874 2.1875 10.2489 2.1875 10.0003C2.1875 9.75162 2.28627 9.51316 2.46209 9.33735C2.6379 9.16153 2.87636 9.06276 3.125 9.06276H14.6094L10.5867 5.03776C10.4106 4.86164 10.3117 4.62277 10.3117 4.3737C10.3117 4.12462 10.4106 3.88575 10.5867 3.70963C10.7628 3.53351 11.0017 3.43457 11.2508 3.43457C11.4999 3.43457 11.7387 3.53351 11.9148 3.70963L17.5398 9.33463C17.6273 9.42185 17.6966 9.52547 17.7438 9.63955C17.7911 9.75364 17.8153 9.87593 17.8152 9.99941C17.815 10.1229 17.7905 10.2451 17.743 10.3591C17.6955 10.4731 17.6259 10.5765 17.5383 10.6635Z" fill="#FFFFFF"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Scale Plan (Featured) -->
+        <div class="relative space-y-4 p-5 md:p-[30px] !border-pgfy-primary-500 rounded-2xl border-[3px] border-white/10 bg-pgfy-gray-500 max-sm:order-first">
+          <div class="space-y-2">
+            <h5 class="text-2xl font-bold md:text-3xl text-white">Scale</h5>
+            <h6 class="text-4xl font-bold leading-[48px] md:text-5xl md:leading-[56px] text-white">
+              $49<span class="text-base font-normal"> /month</span>
+            </h6>
+            <p class="text-pgfy-gray-50/70">Billed annually, up to 5 seats</p>
+          </div>
+
+          <div class="h-px w-full bg-pgfy-wireframe-100/50"></div>
+
+          <div class="space-y-6">
+            <p class="text-pgfy-gray-50">Maximise reviews impact with tools to drive SEO</p>
+            <button class="flex w-full select-none items-center justify-center gap-1 rounded-full px-8 py-3 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
+              <span>Try for free</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5383 10.6635L11.9133 16.2885C11.7372 16.4647 11.4983 16.5636 11.2492 16.5636C11.0001 16.5636 10.7613 16.4647 10.5852 16.2885C10.409 16.1124 10.3101 15.8736 10.3101 15.6245C10.3101 15.3754 10.409 15.1365 10.5852 14.9604L14.6094 10.9378H3.125C2.87636 10.9378 2.6379 10.839 2.46209 10.6632C2.28627 10.4874 2.1875 10.2489 2.1875 10.0003C2.1875 9.75162 2.28627 9.51316 2.46209 9.33735C2.6379 9.16153 2.87636 9.06276 3.125 9.06276H14.6094L10.5867 5.03776C10.4106 4.86164 10.3117 4.62277 10.3117 4.3737C10.3117 4.12462 10.4106 3.88575 10.5867 3.70963C10.7628 3.53351 11.0017 3.43457 11.2508 3.43457C11.4999 3.43457 11.7387 3.53351 11.9148 3.70963L17.5398 9.33463C17.6273 9.42185 17.6966 9.52547 17.7438 9.63955C17.7911 9.75364 17.8153 9.87593 17.8152 9.99941C17.815 10.1229 17.7905 10.2451 17.743 10.3591C17.6955 10.4731 17.6259 10.5765 17.5383 10.6635Z" fill="#0F2C24"></path>
+              </svg>
+            </button>
+          </div>
+
+          <p class="absolute -top-7 right-7 rounded px-2 py-1 text-xs font-bold uppercase bg-pgfy-primary-500 text-pgfy-gray-500">
+            20% OFF
+          </p>
+        </div>
+
+        <!-- Premier Plan -->
+        <div class="relative space-y-4 p-5 md:p-[30px] rounded-2xl border-[3px] border-white/10 bg-pgfy-gray-500">
+          <div class="space-y-2">
+            <h5 class="text-2xl font-bold md:text-3xl text-white">Premier</h5>
+            <h6 class="text-4xl font-bold leading-[48px] md:text-5xl md:leading-[56px] text-white">
+              $99<span class="text-base font-normal"> /month</span>
+            </h6>
+            <p class="text-pgfy-gray-50/70">Billed annually, up to 5 seats</p>
+          </div>
+
+          <div class="h-px w-full bg-pgfy-wireframe-100/50"></div>
+
+          <div class="space-y-6">
+            <p class="text-pgfy-gray-50">Maximise reviews impact with tools to drive SEO</p>
+            <button class="flex w-full select-none items-center justify-center gap-1 rounded-full px-8 py-3 text-base font-bold bg-pgfy-gray-400 text-white">
+              <span>Try for free</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5383 10.6635L11.9133 16.2885C11.7372 16.4647 11.4983 16.5636 11.2492 16.5636C11.0001 16.5636 10.7613 16.4647 10.5852 16.2885C10.409 16.1124 10.3101 15.8736 10.3101 15.6245C10.3101 15.3754 10.409 15.1365 10.5852 14.9604L14.6094 10.9378H3.125C2.87636 10.9378 2.6379 10.839 2.46209 10.6632C2.28627 10.4874 2.1875 10.2489 2.1875 10.0003C2.1875 9.75162 2.28627 9.51316 2.46209 9.33735C2.6379 9.16153 2.87636 9.06276 3.125 9.06276H14.6094L10.5867 5.03776C10.4106 4.86164 10.3117 4.62277 10.3117 4.3737C10.3117 4.12462 10.4106 3.88575 10.5867 3.70963C10.7628 3.53351 11.0017 3.43457 11.2508 3.43457C11.4999 3.43457 11.7387 3.53351 11.9148 3.70963L17.5398 9.33463C17.6273 9.42185 17.6966 9.52547 17.7438 9.63955C17.7911 9.75364 17.8153 9.87593 17.8152 9.99941C17.815 10.1229 17.7905 10.2451 17.743 10.3591C17.6955 10.4731 17.6259 10.5765 17.5383 10.6635Z" fill="#FFFFFF"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Component (root_testimonial-02) -->
+  <section class="py-10 md:py-20 lg:py-28 bg-pgfy-gray-500 text-white">
+    <div class="container">
+      <div class="mx-auto mb-10 w-full text-center md:max-w-[538px] lg:mb-16">
+        <p class="text-base font-bold">Testimonials</p>
+        <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] mt-4 capitalize">
+          <span>What Client say about</span>
+          <span class="text-pgfy-primary-500">our Business</span>
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-8 max-md:flex-col md:gap-10 lg:gap-20">
+        <div class="flex max-h-[480px] w-full min-w-[370px] items-end justify-center md:max-w-[470px] rounded-2xl bg-pgfy-gray-400">
+          <img src="https://static.pagifye.com/root/images/testimonial/testimonial-v2-user-left.png" alt="testimonial" class="object-cover object-bottom">
+        </div>
+
+        <div class="grow space-y-8 md:space-y-16">
+          <div>
+            <img src="https://static.pagifye.com/root/images/testimonial/testimonial-v2-logo-white.svg" alt="quote">
+
+            <p class="mt-6 text-2xl font-bold italic md:mt-10">
+              "I cannot thank Pagifye website builder enough for their exceptional
+              service. From the moment I walked in, I felt welcomed and valued."
+            </p>
+            <p class="mt-6">
+              <span class="font-bold">Amber Stone,</span> Head of Enterprise, UserTesting
+            </p>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="rounded-full border-2 border-pgfy-primary-500">
+              <img src="https://static.pagifye.com/root/images/testimonial/testimonial-v2-user-1.svg" alt="testimonial" class="cursor-pointer rounded-full p-0.5 ">
+            </div>
+            <img src="https://static.pagifye.com/root/images/testimonial/testimonial-v2-user-2.svg" alt="testimonial" class="cursor-pointer ">
+            <img src="https://static.pagifye.com/root/images/testimonial/testimonial-v2-user-3.svg" alt="testimonial" class="cursor-pointer ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Component (root_faq-01) -->
+  <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container flex w-full flex-col gap-8 lg:gap-16">
+      <div class="flex w-full flex-col items-center justify-center gap-4">
+        <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] w-full max-w-[644px] text-center capitalize text-white">
+          <span> Frequently asked </span>
+          <span class="text-pgfy-primary-500"> questions</span>
+        </h1>
+        <p class="text-base font-normal text-pgfy-gray-50">
+          Everything you need to know about Pagifye
+        </p>
+      </div>
+
+      <ul class="flex flex-col gap-4 lg:gap-7" x-data="{selected:null}">
+        <li class="relative rounded-lg bg-pgfy-gray-400">
+          <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 1 ? selected = 1 : selected = null">
+            <p class="text-xl font-bold lg:text-2xl text-white">How to create a user?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 1 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+              <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+            </svg>
+          </button>
+          <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+            <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+              libero non augue vestibulum finibus at vitae ex. Donec euismod non
+              tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+              porta nulla.
+            </p>
+          </div>
+        </li>
+
+        <li class="relative rounded-lg bg-pgfy-gray-400">
+          <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 2 ? selected = 2 : selected = null">
+            <p class="text-xl font-bold lg:text-2xl text-white">How much does it cost to create a user?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 2 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+              <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+            </svg>
+          </button>
+          <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+            <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+              libero non augue vestibulum finibus at vitae ex.
+            </p>
+          </div>
+        </li>
+
+        <li class="relative rounded-lg bg-pgfy-gray-400">
+          <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 3 ? selected = 3 : selected = null">
+            <p class="text-xl font-bold lg:text-2xl text-white">Can we get a review of Pagifye?</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 3 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+              <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+            </svg>
+          </button>
+          <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+            <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+              libero non augue vestibulum finibus at vitae ex.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>

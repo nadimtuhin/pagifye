@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page - Pagifye Components Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'pgfy-gray': {
+              50: '#F5F7F6',
+              400: '#1A2E27',
+              500: '#0F2C24',
+            },
+            'pgfy-primary': {
+              500: '#8FE35F',
+              600: '#7DD44E',
+            },
+            'pgfy-neutral-white': '#E8F0ED',
+          },
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-pgfy-gray-500">
+
+  <!-- Navigation Component (root_navigation-01) -->
+  <section class="min-h-screen">
+    <header class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
+      <div class="container flex items-center lg:justify-between">
+        <a href="landing-page.html">
+          <img src="https://static.pagifye.com/root/images/navbar/root-ui-white-logo.svg" alt="logo">
+        </a>
+
+        <nav>
+          <ul class="flex gap-6 max-lg:hidden">
+            <li><a href="landing-page.html">Home</a></li>
+            <li class="group relative">
+              <a href="#" class="flex items-center gap-1">
+                Product
+                <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 group-hover:rotate-180">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <div class="invisible absolute left-0 top-full z-50 min-w-[200px] rounded-lg p-4 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100 bg-pgfy-gray-400">
+                <ul class="flex flex-col gap-2">
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Overview</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Features</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Solutions</a></li>
+                  <li><a href="landing-page.html" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Integrations</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="team-about-page.html">About</a></li>
+            <li><a href="pricing-page.html">Pricing</a></li>
+            <li><a href="blog-page.html">Blog</a></li>
+          </ul>
+        </nav>
+
+        <div class="flex gap-6 max-lg:hidden">
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+            <span>Sign In</span>
+          </button>
+          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+            <span>Get Started</span>
+          </button>
+        </div>
+      </div>
+
+      <div x-data="{ isOpen: false }" class="flex lg:hidden">
+        <button class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
+          Get Started
+        </button>
+        <button @click="isOpen = !isOpen" class="relative z-10">
+          <img src="https://static.pagifye.com/root/images/navbar/burger-menu-white.svg" alt="Menu" class="min-h-6 min-w-6 ">
+        </button>
+      </div>
+    </header>
+  </section>
+
+  <!-- Blog Component (root_blog-05) -->
+  <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container">
+      <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] mx-auto w-full max-w-[538px] text-center capitalize text-white">
+        <span>take a look at the latest </span>
+        <span class="text-pgfy-primary-500">article and blog</span>
+      </h1>
+
+      <div class="mt-8 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 lg:mt-16 lg:grid-cols-1">
+        <!-- Blog Article 1 -->
+        <div class="group flex cursor-pointer gap-4 overflow-hidden p-5 transition-colors duration-300 max-lg:flex-col md:items-center md:p-6 lg:gap-11 rounded-2xl bg-pgfy-gray-400 hover:bg-pgfy-primary-500">
+          <div class="flex items-center gap-4 max-lg:flex-col lg:w-2/3 lg:gap-6">
+            <div class="w-full overflow-hidden max-lg:h-[300px] lg:h-[150px] lg:max-w-[208px]">
+              <img class="size-full object-cover object-center rounded-lg" src="https://static.pagifye.com/root/images/blog/blog-model5.png" alt="Blog">
+            </div>
+
+            <div>
+              <p class="text-white group-hover:text-pgfy-gray-500">
+                Leslie Alexander . 9 min
+              </p>
+
+              <h4 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
+                10 Essential Strategies for Scaling Your Small Business in 2024
+              </h4>
+            </div>
+          </div>
+
+          <div class="flex gap-4 max-lg:flex-col lg:w-2/4 lg:items-center lg:gap-8">
+            <p class="text-white group-hover:text-pgfy-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui ex,
+              commodo non sagittis sed, vulputate a massa. Mauris congue turpis felis
+            </p>
+
+            <span class="size-7 cursor-pointer rounded-full p-1 bg-pgfy-primary-500">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6537 8.49747L9.43496 12.7162C9.30287 12.8483 9.12372 12.9225 8.93691 12.9225C8.75011 12.9225 8.57096 12.8483 8.43887 12.7162C8.30678 12.5841 8.23257 12.405 8.23257 12.2182C8.23257 12.0314 8.30678 11.8522 8.43887 11.7201L11.457 8.70314H2.84375C2.65727 8.70314 2.47843 8.62906 2.34657 8.4972C2.2147 8.36533 2.14062 8.18649 2.14062 8.00001C2.14062 7.81353 2.2147 7.63469 2.34657 7.50283C2.47843 7.37096 2.65727 7.29689 2.84375 7.29689H11.457L8.44004 4.27814C8.30795 4.14605 8.23374 3.96689 8.23374 3.78009C8.23374 3.59329 8.30795 3.41413 8.44004 3.28204C8.57213 3.14995 8.75128 3.07574 8.93809 3.07574C9.12489 3.07574 9.30404 3.14995 9.43613 3.28204L13.6549 7.50079C13.7204 7.5662 13.7724 7.64392 13.8079 7.72948C13.8433 7.81504 13.8615 7.90676 13.8614 7.99938C13.8613 8.09199 13.8429 8.18366 13.8072 8.26914C13.7716 8.35462 13.7194 8.43222 13.6537 8.49747Z" fill="#0F2C24" class="transition-all duration-300 group-hover:translate-x-0.5"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Blog Article 2 -->
+        <div class="group flex cursor-pointer gap-4 overflow-hidden p-5 transition-colors duration-300 max-lg:flex-col md:items-center md:p-6 lg:gap-11 rounded-2xl bg-pgfy-gray-400 hover:bg-pgfy-primary-500">
+          <div class="flex items-center gap-4 max-lg:flex-col lg:w-2/3 lg:gap-6">
+            <div class="w-full overflow-hidden max-lg:h-[300px] lg:h-[150px] lg:max-w-[208px]">
+              <img class="size-full object-cover object-center rounded-lg" src="https://static.pagifye.com/root/images/blog/blog-model6.png" alt="Blog">
+            </div>
+
+            <div>
+              <p class="text-white group-hover:text-pgfy-gray-500">
+                Leslie Alexander . 9 min
+              </p>
+
+              <h4 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
+                How to Create a Bulletproof Financial Plan for Your Business
+              </h4>
+            </div>
+          </div>
+
+          <div class="flex gap-4 max-lg:flex-col lg:w-2/4 lg:items-center lg:gap-8">
+            <p class="text-white group-hover:text-pgfy-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui ex,
+              commodo non sagittis sed, vulputate a massa. Mauris congue turpis felis
+            </p>
+
+            <span class="size-7 cursor-pointer rounded-full p-1 bg-pgfy-primary-500">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6537 8.49747L9.43496 12.7162C9.30287 12.8483 9.12372 12.9225 8.93691 12.9225C8.75011 12.9225 8.57096 12.8483 8.43887 12.7162C8.30678 12.5841 8.23257 12.405 8.23257 12.2182C8.23257 12.0314 8.30678 11.8522 8.43887 11.7201L11.457 8.70314H2.84375C2.65727 8.70314 2.47843 8.62906 2.34657 8.4972C2.2147 8.36533 2.14062 8.18649 2.14062 8.00001C2.14062 7.81353 2.2147 7.63469 2.34657 7.50283C2.47843 7.37096 2.65727 7.29689 2.84375 7.29689H11.457L8.44004 4.27814C8.30795 4.14605 8.23374 3.96689 8.23374 3.78009C8.23374 3.59329 8.30795 3.41413 8.44004 3.28204C8.57213 3.14995 8.75128 3.07574 8.93809 3.07574C9.12489 3.07574 9.30404 3.14995 9.43613 3.28204L13.6549 7.50079C13.7204 7.5662 13.7724 7.64392 13.8079 7.72948C13.8433 7.81504 13.8615 7.90676 13.8614 7.99938C13.8613 8.09199 13.8429 8.18366 13.8072 8.26914C13.7716 8.35462 13.7194 8.43222 13.6537 8.49747Z" fill="#0F2C24" class="transition-all duration-300 group-hover:translate-x-0.5"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Blog Article 3 -->
+        <div class="group flex cursor-pointer gap-4 overflow-hidden p-5 transition-colors duration-300 max-lg:flex-col md:items-center md:p-6 lg:gap-11 rounded-2xl bg-pgfy-gray-400 hover:bg-pgfy-primary-500">
+          <div class="flex items-center gap-4 max-lg:flex-col lg:w-2/3 lg:gap-6">
+            <div class="w-full overflow-hidden max-lg:h-[300px] lg:h-[150px] lg:max-w-[208px]">
+              <img class="size-full object-cover object-center rounded-lg" src="https://static.pagifye.com/root/images/blog/blog-model8.png" alt="Blog">
+            </div>
+
+            <div>
+              <p class="text-white group-hover:text-pgfy-gray-500">
+                Leslie Alexander . 9 min
+              </p>
+
+              <h4 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
+                Why Cash Flow Management is Key to Business Success
+              </h4>
+            </div>
+          </div>
+
+          <div class="flex gap-4 max-lg:flex-col lg:w-2/4 lg:items-center lg:gap-8">
+            <p class="text-white group-hover:text-pgfy-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui ex,
+              commodo non sagittis sed, vulputate a massa. Mauris congue turpis felis
+            </p>
+
+            <span class="size-7 cursor-pointer rounded-full p-1 bg-pgfy-primary-500">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6537 8.49747L9.43496 12.7162C9.30287 12.8483 9.12372 12.9225 8.93691 12.9225C8.75011 12.9225 8.57096 12.8483 8.43887 12.7162C8.30678 12.5841 8.23257 12.405 8.23257 12.2182C8.23257 12.0314 8.30678 11.8522 8.43887 11.7201L11.457 8.70314H2.84375C2.65727 8.70314 2.47843 8.62906 2.34657 8.4972C2.2147 8.36533 2.14062 8.18649 2.14062 8.00001C2.14062 7.81353 2.2147 7.63469 2.34657 7.50283C2.47843 7.37096 2.65727 7.29689 2.84375 7.29689H11.457L8.44004 4.27814C8.30795 4.14605 8.23374 3.96689 8.23374 3.78009C8.23374 3.59329 8.30795 3.41413 8.44004 3.28204C8.57213 3.14995 8.75128 3.07574 8.93809 3.07574C9.12489 3.07574 9.30404 3.14995 9.43613 3.28204L13.6549 7.50079C13.7204 7.5662 13.7724 7.64392 13.8079 7.72948C13.8433 7.81504 13.8615 7.90676 13.8614 7.99938C13.8613 8.09199 13.8429 8.18366 13.8072 8.26914C13.7716 8.35462 13.7194 8.43222 13.6537 8.49747Z" fill="#0F2C24" class="transition-all duration-300 group-hover:translate-x-0.5"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Component (root_contact-01) -->
+  <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container flex flex-col gap-8 md:gap-12 lg:gap-16">
+      <div class="flex justify-between gap-8 max-md:flex-col lg:items-end">
+        <div class="w-full space-y-5 md:max-w-[470px]">
+          <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] capitalize text-white">
+            <span>Contact</span>
+            <span class="text-pgfy-primary-500">us</span>
+          </h1>
+
+          <p class="text-white">
+            Etiam id viverra mi, nec sagittis orci. Mauris iaculis mauris eu
+            lacinia tincidunt. Nulla ullamcorper nunc ac egestas.
+          </p>
+        </div>
+
+        <div class="flex w-full gap-[30px] max-lg:flex-col md:max-w-[482px] lg:gap-[60px]">
+          <div class="flex gap-4 w-full">
+            <div>
+              <svg class="size-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M42 10.501L24 27.001L6 10.501H42Z" class="fill-white"></path>
+                <path d="M42 8.99902H6C5.60218 8.99902 5.22064 9.15706 4.93934 9.43836C4.65804 9.71967 4.5 10.1012 4.5 10.499V35.999C4.5 36.7947 4.81607 37.5577 5.37868 38.1203C5.94129 38.683 6.70435 38.999 7.5 38.999H40.5C41.2957 38.999 42.0587 38.683 42.6213 38.1203C43.1839 37.5577 43.5 36.7947 43.5 35.999V10.499C43.5 10.1012 43.342 9.71967 43.0607 9.43836C42.7794 9.15706 42.3978 8.99902 42 8.99902ZM38.1431 11.999L24 24.9646L9.85687 11.999H38.1431ZM40.5 35.999H7.5V13.9096L22.9856 28.1053C23.2624 28.3593 23.6243 28.5003 24 28.5003C24.3757 28.5003 24.7376 28.3593 25.0144 28.1053L40.5 13.9096V35.999Z" class="fill-white"></path>
+              </svg>
+            </div>
+
+            <div class="space-y-2">
+              <h4 class="text-white text-lg md:text-xl font-bold">Send us an email:</h4>
+              <p class="text-white">hello@example.com</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 w-full">
+            <div>
+              <svg class="size-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M41.9888 32.6392C41.6975 34.8162 40.6254 36.8133 38.972 38.259C37.3186 39.7048 35.1964 40.5009 33 40.4992C26.237 40.4992 19.751 37.8126 14.9688 33.0304C10.1866 28.2483 7.5 21.7622 7.5 14.9992C7.49832 12.8029 8.2944 10.6806 9.74018 9.02722C11.186 7.37382 13.183 6.30178 15.36 6.01048C15.6818 5.97225 16.0074 6.03926 16.2879 6.20151C16.5684 6.36375 16.7889 6.61248 16.9163 6.91048L20.8781 15.7605C20.9755 15.9878 21.0151 16.2356 20.9935 16.4819C20.9719 16.7283 20.8898 16.9654 20.7544 17.1723L16.7475 21.9367C16.6054 22.1512 16.5213 22.3989 16.5036 22.6555C16.4858 22.9122 16.535 23.1691 16.6463 23.4011C18.1969 26.5755 21.4781 29.8173 24.6619 31.353C24.8951 31.4638 25.1532 31.5118 25.4106 31.4924C25.6681 31.473 25.916 31.3868 26.13 31.2423L30.8175 27.2486C31.0252 27.1104 31.2642 27.0261 31.5127 27.0036C31.7612 26.981 32.0114 27.0207 32.2406 27.1192L41.0831 31.0811C41.3825 31.2076 41.6327 31.428 41.796 31.709C41.9594 31.99 42.027 32.3165 41.9888 32.6392Z" class="fill-white"></path>
+                <path d="M41.6944 29.7109L32.8613 25.7527L32.8369 25.7415C32.3783 25.5454 31.8781 25.4667 31.3815 25.5125C30.8848 25.5583 30.4074 25.7273 29.9925 26.004C29.9437 26.0363 29.8967 26.0713 29.8519 26.109L25.2881 29.9996C22.3969 28.5952 19.4119 25.6327 18.0075 22.779L21.9038 18.1459C21.9413 18.099 21.9769 18.0521 22.0106 18.0015C22.2814 17.5877 22.4457 17.1133 22.4889 16.6207C22.5321 16.128 22.4528 15.6324 22.2581 15.1777V15.1552L18.2888 6.30712C18.0314 5.71324 17.5889 5.21852 17.0272 4.89682C16.4656 4.57511 15.815 4.44367 15.1725 4.52212C12.6318 4.85645 10.2997 6.10419 8.61177 8.0323C6.92381 9.96041 5.99542 12.437 6.00002 14.9996C6.00002 29.8871 18.1125 41.9996 33 41.9996C35.5626 42.0042 38.0392 41.0758 39.9673 39.3879C41.8955 37.6999 43.1432 35.3678 43.4775 32.8271C43.5561 32.1849 43.4249 31.5344 43.1036 30.9728C42.7822 30.4112 42.2879 29.9685 41.6944 29.7109ZM33 38.9996C26.637 38.9927 20.5365 36.4619 16.0371 31.9625C11.5378 27.4631 9.00696 21.3627 9.00002 14.9996C8.99296 13.1687 9.65261 11.3977 10.8558 10.0176C12.0589 8.6374 13.7233 7.74237 15.5381 7.49962C15.5374 7.5071 15.5374 7.51464 15.5381 7.52212L19.4756 16.3346L15.6 20.9734C15.5607 21.0186 15.5249 21.0669 15.4931 21.1177C15.211 21.5507 15.0455 22.0492 15.0126 22.565C14.9798 23.0807 15.0807 23.5962 15.3056 24.0615C17.0044 27.5359 20.505 31.0102 24.0169 32.7071C24.4856 32.93 25.0041 33.0274 25.5217 32.9899C26.0393 32.9525 26.5383 32.7814 26.97 32.4934C27.0182 32.4609 27.0645 32.4259 27.1088 32.3884L31.6669 28.4996L40.4794 32.4465C40.4794 32.4465 40.4944 32.4465 40.5 32.4465C40.2602 34.2639 39.3665 35.9316 37.9861 37.1378C36.6057 38.3439 34.8331 39.0058 33 38.9996Z" class="fill-white"></path>
+              </svg>
+            </div>
+
+            <div class="space-y-2">
+              <h4 class="text-white text-lg md:text-xl font-bold">Give us a call:</h4>
+              <p class="text-white">+01222 222 222</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-px w-full bg-white/15"></div>
+
+      <div class="flex items-center gap-8 max-md:flex-col md:gap-10 lg:gap-20">
+        <div class="h-[336px] w-full rounded-xl sm:h-[562px] lg:max-w-[620px]">
+          <img class="size-full rounded-xl object-cover object-center" src="https://static.pagifye.com/root/images/contact/womanV1.png" alt="Contact">
+        </div>
+
+        <div class="flex w-full flex-col gap-6 md:max-w-[470px] md:gap-8">
+          <h4 class="text-2xl font-bold capitalize text-white md:text-3xl">
+            Let's talk with us
+          </h4>
+
+          <form action="#" method="post" class="space-y-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="name" class="text-white">Name</label>
+              <input type="text" name="name" id="name" placeholder="Enter your name" class="rounded-lg border bg-transparent focus-visible:border-pgfy-primary-500 focus-visible:outline-none p-3 border-white/15 text-white">
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label for="email" class="text-white">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" class="rounded-lg border bg-transparent focus-visible:border-pgfy-primary-500 focus-visible:outline-none p-3 border-white/15 text-white">
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label for="message" class="text-white">Message</label>
+              <textarea name="message" id="message" placeholder="Enter your message" rows="5" cols="5" class="rounded-lg border bg-transparent focus-visible:border-pgfy-primary-500 focus-visible:outline-none p-3 border-white/15 text-white"></textarea>
+            </div>
+
+            <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full !mt-8 w-full px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
