@@ -1,0 +1,114 @@
+<section class="min-h-screen">
+  <header class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
+    <!-- Desktop -->
+    <div class="container flex items-center lg:justify-between">
+      <div class="flex items-center gap-10">
+        <!-- logo -->
+        <a href="#top">
+          <img src="https://static.pagifye.com/root/images/navbar/root-ui-white-logo.svg" alt="logo">
+        </a>
+
+        <!-- menu -->
+        <nav>
+          <ul class="flex gap-6 max-lg:hidden">
+            <li>
+              <a href="#top">Home</a>
+            </li>
+            <li class="group relative">
+              <a href="#top" class="flex items-center gap-1">
+                Product
+                <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 group-hover:rotate-180">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu -->
+              <div class="invisible absolute left-0 top-full z-50 min-w-[200px] rounded-lg p-4 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100 bg-pgfy-gray-400">
+                <ul class="flex flex-col gap-2">
+                  <li>
+                    <a href="#top" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#top" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Features</a>
+                  </li>
+                  <li>
+                    <a href="#top" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Solutions</a>
+                  </li>
+                  <li>
+                    <a href="#top" class="block rounded-lg px-3 py-2 transition-colors hover:bg-pgfy-primary-500 hover:text-pgfy-gray-500">Integrations</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a href="#top">Solutions</a>
+            </li>
+            <li>
+              <a href="#top">Pricing</a>
+            </li>
+            <li>
+              <a href="#top">Blogs</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- buttons -->
+      <div class="flex gap-6 max-lg:hidden">
+        <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+  <span>Sign In</span>
+  
+</button>
+
+        <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+  <span>Get Started</span>
+
+  
+</button>
+      </div>
+    </div>
+
+    <!-------- Mobile ------->
+    <div x-data="{ isOpen: false }" class="flex lg:hidden">
+      <button @click="isOpen = !isOpen">
+        <img src="https://static.pagifye.com/root/images/navbar/burger-menu-white.svg" alt="" srcset="" class="min-h-6 min-w-6 ">
+      </button>
+
+      <div x-show="isOpen" style="display: none;">
+        <div class="absolute inset-x-0 top-[70px] z-20 flex h-[calc(100vh-72px)] w-full flex-col justify-between overflow-y-auto px-4 pb-4 bg-pgfy-gray-500">
+  <ul class="space-y-4 pt-6">
+    <li>
+      <a href="#top" class="block font-bold transition-colors text-white">Home</a>
+    </li>
+    <li>
+      <a href="#top" class="block font-bold transition-colors text-white">About us</a>
+    </li>
+    <li>
+      <a href="#top" class="block font-bold transition-colors text-white">How it works</a>
+    </li>
+    <li>
+      <a href="#top" class="block font-bold transition-colors text-white">Case Study</a>
+    </li>
+    <li>
+      <a href="#top" class="block font-bold transition-colors text-white">Service</a>
+    </li>
+  </ul>
+
+  <div class="flex w-full flex-wrap gap-4 max-sm:flex-col">
+    <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+  <span>Sign In</span>
+  
+</button>
+
+    <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+  <span>Get Started</span>
+
+  
+</button>
+  </div>
+</div>
+      </div>
+    </div>
+  </header>
+</section>

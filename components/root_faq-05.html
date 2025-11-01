@@ -1,0 +1,484 @@
+<section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container flex w-full flex-col gap-8 lg:gap-16">
+      <div class="flex w-full flex-col items-center justify-center gap-4">
+        <p class="text-base font-semibold text-white">FAQ'S</p>
+        <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] w-full max-w-[644px] text-center capitalize text-white">
+  
+          <span> Frequently asked </span>
+          <span class="text-pgfy-primary-500"> questions</span>
+        
+</h1>
+      </div>
+      <div class="flex flex-col gap-8 md:gap-10 lg:items-center" x-data="{button:1}">
+        <div class="no-scrollbar relative overflow-scroll">
+          <div class="absolute left-0 top-[60px] h-1 w-[184px] bg-pgfy-primary-500 duration-300 before:transition-all before:content-[] lg:w-[244px] translate-x-[0px]" x-bind:class="button === 1 ? 'translate-x-[0px]' : 
+            button === 2 ? 'lg:translate-x-[244px] translate-x-[184px]' : 
+            button === 3 ? 'lg:translate-x-[488px] translate-x-[368px]' : 
+            button === 4 ? 'lg:translate-x-[724px] translate-x-[552px]' : ''">
+          </div>
+          <div class="flex w-[736px] border-b border-b-white/20 text-white lg:w-[970px]">
+            <p class="w-full max-w-[242px] cursor-pointer pb-6 pt-4 text-center" @click="button !== 1 ? button = 1 : button = 1">
+              General
+            </p>
+            <p class="w-full max-w-[242px] cursor-pointer pb-6 pt-4 text-center" @click="button !== 2 ? button = 2 : button = 2">
+              Employers
+            </p>
+            <p class="w-full max-w-[242px] cursor-pointer pb-6 pt-4 text-center" @click="button !== 3 ? button = 3 : button = 3">
+              Products
+            </p>
+            <p class="w-full max-w-[242px] cursor-pointer pb-6 pt-4 text-center" @click="button !== 4 ? button = 4 : button = 4">
+              Community
+            </p>
+          </div>
+        </div>
+        <ul class="flex flex-col gap-4 lg:gap-7 block" x-data="{selected:null}" x-bind:class="button === 1 ? 'block' : 'hidden'">
+          <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 1 ? selected = 1 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0" fill="#3BEB64"></path><path d="M28.865 26.5c-1.904-3.291-4.838-5.651-8.261-6.77a9 9 0 1 0-9.208 0c-3.424 1.117-6.357 3.477-8.261 6.77a1 1 0 1 0 1.731 1C7.221 23.43 11.384 21 16 21s8.779 2.43 11.134 6.5A1.001 1.001 0 0 0 29 26.872a1 1 0 0 0-.136-.372M9 12a7 7 0 1 1 7 7 7.007 7.007 0 0 1-7-7" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How to create a general account?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 1 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 1 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 2 ? selected = 2 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M20 16a4 4 0 1 1-8 0 4 4 0 0 1 8 0m5-8a6.11 6.11 0 0 0 5 5V8zm0 16h5v-5a6.11 6.11 0 0 0-5 5M2 19v5h5a6.11 6.11 0 0 0-5-5m0-6a6.11 6.11 0 0 0 5-5H2z" fill="#3BEB64"></path><path d="M16 11a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 8a3 3 0 1 1 0-5.999A3 3 0 0 1 16 19M30 7H2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h28a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1M3 9h2.671A5.1 5.1 0 0 1 3 11.671zm0 14v-2.671A5.1 5.1 0 0 1 5.671 23zm26 0h-2.671A5.1 5.1 0 0 1 29 20.329zm0-4.794A7.1 7.1 0 0 0 24.206 23H7.794A7.1 7.1 0 0 0 3 18.206v-4.412A7.1 7.1 0 0 0 7.794 9h16.412A7.1 7.1 0 0 0 29 13.794zm0-6.535A5.1 5.1 0 0 1 26.329 9H29z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How much does it cost to create a general user?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 2 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 2 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 3 ? selected = 3 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="m28.633 13.599-6.088 5.25 1.86 7.849a1.051 1.051 0 0 1-1.565 1.146L16 23.636l-6.84 4.207a1.05 1.05 0 0 1-1.565-1.147l1.86-7.848-6.087-5.25a1.058 1.058 0 0 1 .598-1.848l7.99-.65 3.077-7.45a1.044 1.044 0 0 1 1.935 0l3.077 7.45 7.989.65a1.057 1.057 0 0 1 .599 1.849" fill="#3BEB64"></path><path d="M29.898 12.158a2.05 2.05 0 0 0-1.783-1.408l-7.375-.595-2.847-6.886a2.045 2.045 0 0 0-3.784 0l-2.845 6.885-7.379.596a2.058 2.058 0 0 0-1.171 3.608l5.625 4.853-1.714 7.258a2.048 2.048 0 0 0 3.063 2.227L16 24.811l6.316 3.885a2.05 2.05 0 0 0 3.06-2.227l-1.72-7.259 5.624-4.854a2.05 2.05 0 0 0 .618-2.198m-1.918.683-6.087 5.25a1 1 0 0 0-.32.99l1.86 7.85a.046.046 0 0 1-.022.06c-.022.017-.028.013-.047 0l-6.84-4.207a1 1 0 0 0-1.048 0l-6.84 4.209c-.018.01-.023.015-.047 0a.046.046 0 0 1-.021-.06l1.86-7.85a1 1 0 0 0-.32-.99l-6.088-5.25c-.015-.012-.029-.023-.016-.062.012-.038.022-.033.041-.036l7.99-.645a1 1 0 0 0 .84-.617l3.078-7.452c.01-.02.013-.03.043-.03s.034.01.044.03l3.085 7.452a1 1 0 0 0 .844.615l7.99.645c.019 0 .03 0 .041.036s0 .05-.02.062" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Can we get a review of Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 3 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 3 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 4 ? selected = 4 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M26 6H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2M14 19v-8l6 4z" fill="#3BEB64"></path><path d="M26 5H6a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m1 17a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1zm-6 6a1 1 0 0 1-1 1h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1m-.445-13.832-6-4A1 1 0 0 0 13 11v8a1 1 0 0 0 1.555.832l6-4a1 1 0 0 0 0-1.665M15 17.13v-4.256L18.198 15z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Boost in-app engagement with real-time video?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 4 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 4 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 5 ? selected = 5 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 14a10 10 0 1 1-20 0 10 10 0 0 1 20 0" fill="#3BEB64"></path><path d="m28.708 27.293-6.258-6.258a11.027 11.027 0 1 0-1.415 1.414l6.258 6.259a1 1 0 0 0 1.415-1.415M5 14a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Who uses Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 5 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 5 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+        </ul>
+        <ul class="flex flex-col gap-4 lg:gap-7 hidden" x-data="{selected:null}" x-bind:class="button === 2 ? 'block' : 'hidden'">
+          <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 1 ? selected = 1 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0" fill="#3BEB64"></path><path d="M28.865 26.5c-1.904-3.291-4.838-5.651-8.261-6.77a9 9 0 1 0-9.208 0c-3.424 1.117-6.357 3.477-8.261 6.77a1 1 0 1 0 1.731 1C7.221 23.43 11.384 21 16 21s8.779 2.43 11.134 6.5A1.001 1.001 0 0 0 29 26.872a1 1 0 0 0-.136-.372M9 12a7 7 0 1 1 7 7 7.007 7.007 0 0 1-7-7" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How to create a Employers account?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 1 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 1 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 2 ? selected = 2 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M20 16a4 4 0 1 1-8 0 4 4 0 0 1 8 0m5-8a6.11 6.11 0 0 0 5 5V8zm0 16h5v-5a6.11 6.11 0 0 0-5 5M2 19v5h5a6.11 6.11 0 0 0-5-5m0-6a6.11 6.11 0 0 0 5-5H2z" fill="#3BEB64"></path><path d="M16 11a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 8a3 3 0 1 1 0-5.999A3 3 0 0 1 16 19M30 7H2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h28a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1M3 9h2.671A5.1 5.1 0 0 1 3 11.671zm0 14v-2.671A5.1 5.1 0 0 1 5.671 23zm26 0h-2.671A5.1 5.1 0 0 1 29 20.329zm0-4.794A7.1 7.1 0 0 0 24.206 23H7.794A7.1 7.1 0 0 0 3 18.206v-4.412A7.1 7.1 0 0 0 7.794 9h16.412A7.1 7.1 0 0 0 29 13.794zm0-6.535A5.1 5.1 0 0 1 26.329 9H29z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How much does it cost to create a Employers user?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 2 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 2 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 3 ? selected = 3 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="m28.633 13.599-6.088 5.25 1.86 7.849a1.051 1.051 0 0 1-1.565 1.146L16 23.636l-6.84 4.207a1.05 1.05 0 0 1-1.565-1.147l1.86-7.848-6.087-5.25a1.058 1.058 0 0 1 .598-1.848l7.99-.65 3.077-7.45a1.044 1.044 0 0 1 1.935 0l3.077 7.45 7.989.65a1.057 1.057 0 0 1 .599 1.849" fill="#3BEB64"></path><path d="M29.898 12.158a2.05 2.05 0 0 0-1.783-1.408l-7.375-.595-2.847-6.886a2.045 2.045 0 0 0-3.784 0l-2.845 6.885-7.379.596a2.058 2.058 0 0 0-1.171 3.608l5.625 4.853-1.714 7.258a2.048 2.048 0 0 0 3.063 2.227L16 24.811l6.316 3.885a2.05 2.05 0 0 0 3.06-2.227l-1.72-7.259 5.624-4.854a2.05 2.05 0 0 0 .618-2.198m-1.918.683-6.087 5.25a1 1 0 0 0-.32.99l1.86 7.85a.046.046 0 0 1-.022.06c-.022.017-.028.013-.047 0l-6.84-4.207a1 1 0 0 0-1.048 0l-6.84 4.209c-.018.01-.023.015-.047 0a.046.046 0 0 1-.021-.06l1.86-7.85a1 1 0 0 0-.32-.99l-6.088-5.25c-.015-.012-.029-.023-.016-.062.012-.038.022-.033.041-.036l7.99-.645a1 1 0 0 0 .84-.617l3.078-7.452c.01-.02.013-.03.043-.03s.034.01.044.03l3.085 7.452a1 1 0 0 0 .844.615l7.99.645c.019 0 .03 0 .041.036s0 .05-.02.062" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Can we get a review of Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 3 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 3 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 4 ? selected = 4 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M26 6H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2M14 19v-8l6 4z" fill="#3BEB64"></path><path d="M26 5H6a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m1 17a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1zm-6 6a1 1 0 0 1-1 1h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1m-.445-13.832-6-4A1 1 0 0 0 13 11v8a1 1 0 0 0 1.555.832l6-4a1 1 0 0 0 0-1.665M15 17.13v-4.256L18.198 15z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Boost in-app engagement with real-time video?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 4 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 4 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 5 ? selected = 5 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 14a10 10 0 1 1-20 0 10 10 0 0 1 20 0" fill="#3BEB64"></path><path d="m28.708 27.293-6.258-6.258a11.027 11.027 0 1 0-1.415 1.414l6.258 6.259a1 1 0 0 0 1.415-1.415M5 14a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Who uses Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 5 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 5 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+        </ul>
+        <ul class="flex flex-col gap-4 lg:gap-7 hidden" x-data="{selected:null}" x-bind:class="button === 3 ? 'block' : 'hidden'">
+          <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 1 ? selected = 1 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0" fill="#3BEB64"></path><path d="M28.865 26.5c-1.904-3.291-4.838-5.651-8.261-6.77a9 9 0 1 0-9.208 0c-3.424 1.117-6.357 3.477-8.261 6.77a1 1 0 1 0 1.731 1C7.221 23.43 11.384 21 16 21s8.779 2.43 11.134 6.5A1.001 1.001 0 0 0 29 26.872a1 1 0 0 0-.136-.372M9 12a7 7 0 1 1 7 7 7.007 7.007 0 0 1-7-7" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How to create a Products account?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 1 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 1 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 2 ? selected = 2 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M20 16a4 4 0 1 1-8 0 4 4 0 0 1 8 0m5-8a6.11 6.11 0 0 0 5 5V8zm0 16h5v-5a6.11 6.11 0 0 0-5 5M2 19v5h5a6.11 6.11 0 0 0-5-5m0-6a6.11 6.11 0 0 0 5-5H2z" fill="#3BEB64"></path><path d="M16 11a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 8a3 3 0 1 1 0-5.999A3 3 0 0 1 16 19M30 7H2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h28a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1M3 9h2.671A5.1 5.1 0 0 1 3 11.671zm0 14v-2.671A5.1 5.1 0 0 1 5.671 23zm26 0h-2.671A5.1 5.1 0 0 1 29 20.329zm0-4.794A7.1 7.1 0 0 0 24.206 23H7.794A7.1 7.1 0 0 0 3 18.206v-4.412A7.1 7.1 0 0 0 7.794 9h16.412A7.1 7.1 0 0 0 29 13.794zm0-6.535A5.1 5.1 0 0 1 26.329 9H29z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How much does it cost to create a Products user?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 2 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 2 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 3 ? selected = 3 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="m28.633 13.599-6.088 5.25 1.86 7.849a1.051 1.051 0 0 1-1.565 1.146L16 23.636l-6.84 4.207a1.05 1.05 0 0 1-1.565-1.147l1.86-7.848-6.087-5.25a1.058 1.058 0 0 1 .598-1.848l7.99-.65 3.077-7.45a1.044 1.044 0 0 1 1.935 0l3.077 7.45 7.989.65a1.057 1.057 0 0 1 .599 1.849" fill="#3BEB64"></path><path d="M29.898 12.158a2.05 2.05 0 0 0-1.783-1.408l-7.375-.595-2.847-6.886a2.045 2.045 0 0 0-3.784 0l-2.845 6.885-7.379.596a2.058 2.058 0 0 0-1.171 3.608l5.625 4.853-1.714 7.258a2.048 2.048 0 0 0 3.063 2.227L16 24.811l6.316 3.885a2.05 2.05 0 0 0 3.06-2.227l-1.72-7.259 5.624-4.854a2.05 2.05 0 0 0 .618-2.198m-1.918.683-6.087 5.25a1 1 0 0 0-.32.99l1.86 7.85a.046.046 0 0 1-.022.06c-.022.017-.028.013-.047 0l-6.84-4.207a1 1 0 0 0-1.048 0l-6.84 4.209c-.018.01-.023.015-.047 0a.046.046 0 0 1-.021-.06l1.86-7.85a1 1 0 0 0-.32-.99l-6.088-5.25c-.015-.012-.029-.023-.016-.062.012-.038.022-.033.041-.036l7.99-.645a1 1 0 0 0 .84-.617l3.078-7.452c.01-.02.013-.03.043-.03s.034.01.044.03l3.085 7.452a1 1 0 0 0 .844.615l7.99.645c.019 0 .03 0 .041.036s0 .05-.02.062" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Can we get a review of Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 3 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 3 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 4 ? selected = 4 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M26 6H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2M14 19v-8l6 4z" fill="#3BEB64"></path><path d="M26 5H6a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m1 17a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1zm-6 6a1 1 0 0 1-1 1h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1m-.445-13.832-6-4A1 1 0 0 0 13 11v8a1 1 0 0 0 1.555.832l6-4a1 1 0 0 0 0-1.665M15 17.13v-4.256L18.198 15z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Boost in-app engagement with real-time video?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 4 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 4 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 5 ? selected = 5 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 14a10 10 0 1 1-20 0 10 10 0 0 1 20 0" fill="#3BEB64"></path><path d="m28.708 27.293-6.258-6.258a11.027 11.027 0 1 0-1.415 1.414l6.258 6.259a1 1 0 0 0 1.415-1.415M5 14a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Who uses Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 5 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 5 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+        </ul>
+        <ul class="flex flex-col gap-4 lg:gap-7 hidden" x-data="{selected:null}" x-bind:class="button === 4 ? 'block' : 'hidden'">
+          <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 1 ? selected = 1 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0" fill="#3BEB64"></path><path d="M28.865 26.5c-1.904-3.291-4.838-5.651-8.261-6.77a9 9 0 1 0-9.208 0c-3.424 1.117-6.357 3.477-8.261 6.77a1 1 0 1 0 1.731 1C7.221 23.43 11.384 21 16 21s8.779 2.43 11.134 6.5A1.001 1.001 0 0 0 29 26.872a1 1 0 0 0-.136-.372M9 12a7 7 0 1 1 7 7 7.007 7.007 0 0 1-7-7" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How to create a Community account?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 1 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 1 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 2 ? selected = 2 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M20 16a4 4 0 1 1-8 0 4 4 0 0 1 8 0m5-8a6.11 6.11 0 0 0 5 5V8zm0 16h5v-5a6.11 6.11 0 0 0-5 5M2 19v5h5a6.11 6.11 0 0 0-5-5m0-6a6.11 6.11 0 0 0 5-5H2z" fill="#3BEB64"></path><path d="M16 11a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 8a3 3 0 1 1 0-5.999A3 3 0 0 1 16 19M30 7H2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h28a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1M3 9h2.671A5.1 5.1 0 0 1 3 11.671zm0 14v-2.671A5.1 5.1 0 0 1 5.671 23zm26 0h-2.671A5.1 5.1 0 0 1 29 20.329zm0-4.794A7.1 7.1 0 0 0 24.206 23H7.794A7.1 7.1 0 0 0 3 18.206v-4.412A7.1 7.1 0 0 0 7.794 9h16.412A7.1 7.1 0 0 0 29 13.794zm0-6.535A5.1 5.1 0 0 1 26.329 9H29z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How much does it cost to create a Community user?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 2 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 2 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 3 ? selected = 3 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="m28.633 13.599-6.088 5.25 1.86 7.849a1.051 1.051 0 0 1-1.565 1.146L16 23.636l-6.84 4.207a1.05 1.05 0 0 1-1.565-1.147l1.86-7.848-6.087-5.25a1.058 1.058 0 0 1 .598-1.848l7.99-.65 3.077-7.45a1.044 1.044 0 0 1 1.935 0l3.077 7.45 7.989.65a1.057 1.057 0 0 1 .599 1.849" fill="#3BEB64"></path><path d="M29.898 12.158a2.05 2.05 0 0 0-1.783-1.408l-7.375-.595-2.847-6.886a2.045 2.045 0 0 0-3.784 0l-2.845 6.885-7.379.596a2.058 2.058 0 0 0-1.171 3.608l5.625 4.853-1.714 7.258a2.048 2.048 0 0 0 3.063 2.227L16 24.811l6.316 3.885a2.05 2.05 0 0 0 3.06-2.227l-1.72-7.259 5.624-4.854a2.05 2.05 0 0 0 .618-2.198m-1.918.683-6.087 5.25a1 1 0 0 0-.32.99l1.86 7.85a.046.046 0 0 1-.022.06c-.022.017-.028.013-.047 0l-6.84-4.207a1 1 0 0 0-1.048 0l-6.84 4.209c-.018.01-.023.015-.047 0a.046.046 0 0 1-.021-.06l1.86-7.85a1 1 0 0 0-.32-.99l-6.088-5.25c-.015-.012-.029-.023-.016-.062.012-.038.022-.033.041-.036l7.99-.645a1 1 0 0 0 .84-.617l3.078-7.452c.01-.02.013-.03.043-.03s.034.01.044.03l3.085 7.452a1 1 0 0 0 .844.615l7.99.645c.019 0 .03 0 .041.036s0 .05-.02.062" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Can we get a review of Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 3 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 3 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 4 ? selected = 4 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M26 6H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2M14 19v-8l6 4z" fill="#3BEB64"></path><path d="M26 5H6a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3m1 17a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1zm-6 6a1 1 0 0 1-1 1h-8a1 1 0 0 1 0-2h8a1 1 0 0 1 1 1m-.445-13.832-6-4A1 1 0 0 0 13 11v8a1 1 0 0 0 1.555.832l6-4a1 1 0 0 0 0-1.665M15 17.13v-4.256L18.198 15z" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Boost in-app engagement with real-time video?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 4 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 4 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+<li class="relative   rounded-lg bg-pgfy-gray-400  ">
+  <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 5 ? selected = 5 : selected = null">
+    <div class="flex gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path opacity=".2" d="M24 14a10 10 0 1 1-20 0 10 10 0 0 1 20 0" fill="#3BEB64"></path><path d="m28.708 27.293-6.258-6.258a11.027 11.027 0 1 0-1.415 1.414l6.258 6.259a1 1 0 0 0 1.415-1.415M5 14a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9" fill="#3BEB64"></path></svg>
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Who uses Pagifye?
+      </p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="w-full max-w-6 md:max-w-[30px] fill-white" x-bind:class="selected == 5 ? 'hidden' : ''"><path d="M18 9a.75.75 0 0 1-.75.75h-7.5v7.5a.75.75 0 1 1-1.5 0v-7.5H.75a.75.75 0 0 1 0-1.5h7.5V.75a.75.75 0 0 1 1.5 0v7.5h7.5A.75.75 0 0 1 18 9"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full max-w-6 md:max-w-[30px] fill-white hidden" x-bind:class="selected == 5 ? '' : 'hidden'"><path d="M21 12.25c0 .265-.079.52-.22.707-.14.188-.331.293-.53.293H3.75c-.199 0-.39-.105-.53-.293A1.2 1.2 0 0 1 3 12.25c0-.265.079-.52.22-.707.14-.188.331-.293.53-.293h16.5c.199 0 .39.105.53.293.141.187.22.442.22.707"></path></svg>
+  </button>
+
+  <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" style="">
+    <p class="p-6 pt-0 text-justify text-white">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+      libero non augue vestibulum finibus at vitae ex. Donec euismod non tellus
+      sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum porta
+      nulla. In maximus interdum nulla, nec elementum nibh elementum ut. In enim
+      sem, tempor iaculis mattis eu, elementum in eros.
+    </p>
+  </div>
+</li>
+        </ul>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,183 @@
+{
+  "scrapeDate": "2025-11-01T21:20:27.519Z",
+  "totalComponents": 34,
+  "method": "puppeteer-api-intercept",
+  "components": [
+    {
+      "slug": "root_navigation-01",
+      "fileName": "root_navigation-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_navigation-03",
+      "fileName": "root_navigation-03.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_navigation-05",
+      "fileName": "root_navigation-05.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_hero-01",
+      "fileName": "root_hero-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_hero-03",
+      "fileName": "root_hero-03.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_hero-04",
+      "fileName": "root_hero-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_hero-06",
+      "fileName": "root_hero-06.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_hero-07",
+      "fileName": "root_hero-07.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_content-02",
+      "fileName": "root_content-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_content-03",
+      "fileName": "root_content-03.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_content-04",
+      "fileName": "root_content-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_metrics-02",
+      "fileName": "root_metrics-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_metrics-06",
+      "fileName": "root_metrics-06.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_team-01",
+      "fileName": "root_team-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_team-02",
+      "fileName": "root_team-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_team-04",
+      "fileName": "root_team-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_pricing-01",
+      "fileName": "root_pricing-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_pricing-02",
+      "fileName": "root_pricing-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_pricing-05",
+      "fileName": "root_pricing-05.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_testimonial-02",
+      "fileName": "root_testimonial-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_testimonial-04",
+      "fileName": "root_testimonial-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_testimonial-05",
+      "fileName": "root_testimonial-05.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_faq-01",
+      "fileName": "root_faq-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_faq-04",
+      "fileName": "root_faq-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_faq-05",
+      "fileName": "root_faq-05.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_contact-01",
+      "fileName": "root_contact-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_contact-02",
+      "fileName": "root_contact-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_contact-04",
+      "fileName": "root_contact-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_awards-01",
+      "fileName": "root_awards-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_awards-02",
+      "fileName": "root_awards-02.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_awards-04",
+      "fileName": "root_awards-04.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_blog-01",
+      "fileName": "root_blog-01.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_blog-03",
+      "fileName": "root_blog-03.html",
+      "source": "api"
+    },
+    {
+      "slug": "root_blog-05",
+      "fileName": "root_blog-05.html",
+      "source": "api"
+    }
+  ],
+  "failed": [
+    {
+      "slug": "root_metrics-04",
+      "error": "Could not extract HTML from API"
+    }
+  ]
+}

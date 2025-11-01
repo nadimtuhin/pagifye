@@ -1,0 +1,117 @@
+<section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container flex w-full flex-col gap-8 lg:gap-16">
+      <div class="flex w-full flex-col items-center justify-center gap-4">
+        <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] w-full max-w-[644px] text-center capitalize text-white">
+  
+          <span> Frequently asked </span>
+          <span class="text-pgfy-primary-500"> questions</span>
+        
+</h1>
+        <p class="text-base font-normal text-pgfy-gray-50">
+          Everything you need to know about Pagifye
+        </p>
+      </div>
+      <ul class="flex flex-col gap-4 lg:gap-7" x-data="{selected:null}">
+  <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+    <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 1 ? selected = 1 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How to create a user?
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 1 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+        <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" style="">
+      <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+    <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 2 ? selected = 2 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How much does it cost to create a user?
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 2 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+        <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" style="">
+      <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+    <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 3 ? selected = 3 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Can we get a review of Pagifye?
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 3 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+        <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" style="">
+      <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+    <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 4 ? selected = 4 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Boost in-app engagement with real-time video?
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 4 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+        <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" style="">
+      <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative   rounded-lg bg-pgfy-gray-400  ">
+    <button type="button" class="flex w-full items-center justify-between p-4 text-left lg:p-6" @click="selected !== 5 ? selected = 5 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Who uses Pagifye?
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="md:min-w-6 fill-white duration-500 ease-in-out" x-bind:class="selected == 5 ? 'rotate-90 duration-500 ease-in-out' : 'duration-500 ease-in-out'">
+        <path d="M17.2959 12.7959L9.7959 20.2959C9.58455 20.5072 9.29791 20.626 8.99902 20.626C8.70014 20.626 8.41349 20.5072 8.20215 20.2959C7.9908 20.0846 7.87207 19.7979 7.87207 19.499C7.87207 19.2001 7.9908 18.9135 8.20215 18.7021L14.9062 12L8.20402 5.2959C8.09937 5.19125 8.01636 5.06702 7.95973 4.93029C7.90309 4.79356 7.87394 4.64702 7.87394 4.49902C7.87394 4.35103 7.90309 4.20448 7.95973 4.06776C8.01636 3.93103 8.09937 3.80679 8.20402 3.70215C8.30867 3.5975 8.4329 3.51449 8.56963 3.45785C8.70636 3.40122 8.8529 3.37207 9.0009 3.37207C9.14889 3.37207 9.29543 3.40122 9.43216 3.45785C9.56889 3.51449 9.69313 3.5975 9.79777 3.70215L17.2978 11.2021C17.4025 11.3068 17.4856 11.4311 17.5422 11.5679C17.5988 11.7047 17.6279 11.8513 17.6277 11.9994C17.6275 12.1475 17.5981 12.2941 17.5412 12.4307C17.4843 12.5674 17.4009 12.6915 17.2959 12.7959Z"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" style="">
+      <p class="p-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+</ul>
+    </div>
+  </section>

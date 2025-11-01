@@ -1,0 +1,197 @@
+<section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
+    <div class="container lg:px-0">
+      <div class="flex flex-col gap-8 max-lg:items-center md:flex-row lg:gap-[70px]">
+        <div class="flex max-w-[470px] flex-col gap-8 md:gap-12">
+          <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] capitalize text-white md:w-max md:max-w-[400px]">
+  
+            <span> Frequently asked</span>
+            <span class="text-pgfy-primary-500"> questions</span>
+          
+</h1>
+          <div class="size-full max-h-[516px] overflow-hidden rounded-lg">
+            <img src="https://static.pagifye.com/root/images/faq/V4office1.png" alt="/images/faq/V4office1.png" class="size-full object-cover">
+          </div>
+        </div>
+        <ul class="flex w-full flex-col justify-between lg:max-w-[630px]" x-data="{selected:null}">
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 1 ? selected = 1 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How to create a user?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 1 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 1 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 2 ? selected = 2 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How much does it cost to create a user?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 2 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 2 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 3 ? selected = 3 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Can we get a review of Pagifye?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 3 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 3 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 4 ? selected = 4 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How can I contact support?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 4 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 4 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 5 ? selected = 5 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        Who uses Pagifye?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 5 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 5 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 6 ? selected = 6 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        What services do you offer?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 6 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 6 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+  <li class="relative border-b border-white/20">
+    <button type="button" class="flex w-full items-center justify-between py-4 text-left lg:py-7" @click="selected !== 7 ? selected = 7 : selected = null">
+      <p class="text-xl font-bold lg:text-2xl text-white">
+        How are strategies personalized?
+      </p>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px] hidden" x-bind:class="selected == 7 ? '' : 'hidden'">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18.25C27 18.5152 26.921 18.7696 26.7803 18.9571C26.6397 19.1446 26.4489 19.25 26.25 19.25H9.75C9.55109 19.25 9.36032 19.1446 9.21967 18.9571C9.07902 18.7696 9 18.5152 9 18.25C9 17.9848 9.07902 17.7304 9.21967 17.5429C9.36032 17.3554 9.55109 17.25 9.75 17.25H26.25C26.4489 17.25 26.6397 17.3554 26.7803 17.5429C26.921 17.7304 27 17.9848 27 18.25Z" fill="#0F2C24"></path>
+      </svg>
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-6 md:max-w-[30px]" x-bind:class="selected == 7 ? 'hidden' : ''">
+        <rect width="36" height="36" rx="18" fill="#3BEB64"></rect>
+        <path d="M27 18C27 18.1989 26.921 18.3897 26.7803 18.5303C26.6397 18.671 26.4489 18.75 26.25 18.75H18.75V26.25C18.75 26.4489 18.671 26.6397 18.5303 26.7803C18.3897 26.921 18.1989 27 18 27C17.8011 27 17.6103 26.921 17.4697 26.7803C17.329 26.6397 17.25 26.4489 17.25 26.25V18.75H9.75C9.55109 18.75 9.36032 18.671 9.21967 18.5303C9.07902 18.3897 9 18.1989 9 18C9 17.8011 9.07902 17.6103 9.21967 17.4697C9.36032 17.329 9.55109 17.25 9.75 17.25H17.25V9.75C17.25 9.55109 17.329 9.36032 17.4697 9.21967C17.6103 9.07902 17.8011 9 18 9C18.1989 9 18.3897 9.07902 18.5303 9.21967C18.671 9.36032 18.75 9.55109 18.75 9.75V17.25H26.25C26.4489 17.25 26.6397 17.329 26.7803 17.4697C26.921 17.6103 27 17.8011 27 18Z" fill="#0F2C24"></path>
+      </svg>
+    </button>
+
+    <div class="relative max-h-0 overflow-hidden transition-all duration-500" x-ref="container7" x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''" style="">
+      <p class="pb-6 pt-0 text-justify text-pgfy-gray-50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac
+        libero non augue vestibulum finibus at vitae ex. Donec euismod non
+        tellus sed lobortis. Praesent diam lacus, congue vel enim vitae, dictum
+        porta nulla. In maximus interdum nulla, nec elementum nibh elementum ut.
+        In enim sem, tempor iaculis mattis eu, elementum in eros.
+      </p>
+    </div>
+  </li>
+</ul>
+      </div>
+    </div>
+  </section>
