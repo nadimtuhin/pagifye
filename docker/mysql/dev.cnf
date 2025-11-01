@@ -1,0 +1,40 @@
+# MySQL Development Configuration
+
+[mysqld]
+# Character Set
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+# InnoDB Settings
+innodb_buffer_pool_size = 256M
+innodb_log_file_size = 64M
+innodb_flush_log_at_trx_commit = 2
+innodb_flush_method = O_DIRECT
+
+# Query Cache (disabled in MySQL 8.0+, but kept for reference)
+# query_cache_type = 1
+# query_cache_size = 32M
+
+# Slow Query Log (for development)
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/slow.log
+long_query_time = 2
+
+# General Log (verbose, use sparingly)
+# general_log = 1
+# general_log_file = /var/log/mysql/general.log
+
+# Max Connections
+max_connections = 151
+
+# Binary Logging (disabled for development)
+skip-log-bin
+
+# Performance Schema
+performance_schema = ON
+
+[mysql]
+default-character-set = utf8mb4
+
+[client]
+default-character-set = utf8mb4
