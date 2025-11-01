@@ -1,0 +1,204 @@
+/**
+ * Pagifye Elementor Widgets - Main Stylesheet
+ *
+ * This file serves as the entry point for Tailwind CSS compilation.
+ */
+
+/* Tailwind Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Custom Base Styles
+ */
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Default body styles */
+  body {
+    @apply antialiased;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-pgfy-primary-500;
+  }
+}
+
+/**
+ * Custom Components
+ *
+ * Widget-specific component styles that are reused across multiple widgets
+ */
+@layer components {
+  /* Container utility matching Pagifye design */
+  .pgfy-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding matching Pagifye components */
+  .pgfy-section {
+    @apply py-10 sm:py-16 lg:py-28;
+  }
+
+  /* Button base styles */
+  .pgfy-btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .pgfy-btn-primary {
+    @apply pgfy-btn bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600 focus:ring-pgfy-primary-500;
+  }
+
+  .pgfy-btn-secondary {
+    @apply pgfy-btn bg-pgfy-gray-500 text-white hover:bg-pgfy-gray-400 focus:ring-pgfy-gray-500;
+  }
+
+  .pgfy-btn-outline {
+    @apply pgfy-btn border-2 border-current text-pgfy-gray-500 hover:bg-pgfy-gray-500 hover:text-white focus:ring-pgfy-gray-500;
+  }
+
+  /* Heading styles */
+  .pgfy-heading {
+    @apply font-bold leading-tight tracking-tight;
+  }
+
+  .pgfy-heading-xl {
+    @apply pgfy-heading text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  .pgfy-heading-lg {
+    @apply pgfy-heading text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  .pgfy-heading-md {
+    @apply pgfy-heading text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  .pgfy-heading-sm {
+    @apply pgfy-heading text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  /* Text highlight (used in headings) */
+  .pgfy-text-highlight {
+    @apply text-pgfy-primary-500;
+  }
+
+  /* Card styles */
+  .pgfy-card {
+    @apply rounded-2xl border border-gray-200 bg-white p-6 transition-shadow duration-200;
+  }
+
+  .pgfy-card-hover {
+    @apply pgfy-card hover:shadow-lg;
+  }
+}
+
+/**
+ * Custom Utilities
+ *
+ * Additional utility classes for common patterns
+ */
+@layer utilities {
+  /* Gradient text */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-pgfy-primary-600 to-pgfy-primary-500 bg-clip-text text-transparent;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/**
+ * Alpine.js Transitions
+ *
+ * Common transition styles for Alpine.js components
+ */
+[x-cloak] {
+  display: none !important;
+}
+
+/* Fade transition */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity 200ms ease-in;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  transition: opacity 200ms ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide down transition (for mobile menus, dropdowns) */
+.slide-down-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.slide-down-enter-active {
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.slide-down-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accordion transition (for FAQ) */
+.accordion-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-enter-active {
+  transition: max-height 300ms ease-in-out, opacity 200ms ease-in;
+}
+
+.accordion-enter-to {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.accordion-leave {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.accordion-leave-active {
+  transition: max-height 300ms ease-in-out, opacity 200ms ease-out;
+}
+
+.accordion-leave-to {
+  max-height: 0;
+  opacity: 0;
+}
