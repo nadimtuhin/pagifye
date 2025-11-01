@@ -1,0 +1,25 @@
+/**
+ * Elementor Editor Styles
+ *
+ * Styles for the Elementor editor panel
+ */
+
+/* Widget panel icon */
+.elementor-element .icon-pagifye {
+  font-family: Arial, sans-serif;
+}
+
+/* Category header */
+.elementor-element .elementor-element-wrapper[data-category="pagifye-widgets"] {
+  border-left: 3px solid #8FE35F;
+}
+
+/* Widget preview in panel */
+.elementor-element[data-widget_type^="pagifye-"] {
+  border-left: 2px solid #8FE35F;
+}
+
+/* Control section headers */
+.elementor-control-section_pagifye {
+  background-color: #f5f7f6;
+}
