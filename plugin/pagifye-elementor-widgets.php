@@ -23,6 +23,37 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * Autoloader for plugin classes
+ */
+spl_autoload_register(function ($class) {
+    // Only autoload classes in our namespace
+    $namespace = 'Pagifye\\ElementorWidgets\\';
+
+    if (strpos($class, $namespace) !== 0) {
+        return;
+    }
+
+    // Remove namespace from class name
+    $class = str_replace($namespace, '', $class);
+
+    // Convert class name to file path
+    $class_parts = explode('\\', $class);
+    $class_file = array_pop($class_parts);
+    $class_file = 'class-' . strtolower(str_replace('_', '-', $class_file)) . '.php';
+
+    // Determine if it's a widget or include file
+    if (!empty($class_parts) && $class_parts[0] === 'Widgets') {
+        $file = plugin_dir_path(__FILE__) . 'widgets/' . $class_file;
+    } else {
+        $file = plugin_dir_path(__FILE__) . 'includes/' . $class_file;
+    }
+
+    if (file_exists($file)) {
+        require_once $file;
+    }
+});
+
+/**
  * Main Pagifye Elementor Widgets Class
  *
  * The main class that initiates and runs the plugin.
@@ -123,8 +154,7 @@ final class Pagifye_Elementor_Widgets {
             return;
         }
 
-        // Add Plugin actions
-        add_action('elementor/widgets/register', [$this, 'init_widgets']);
+        // Register widget category
         add_action('elementor/elements/categories_registered', [$this, 'register_categories']);
 
         // Register Widget Styles
@@ -135,6 +165,12 @@ final class Pagifye_Elementor_Widgets {
 
         // Load textdomain
         add_action('init', [$this, 'i18n']);
+
+        // Initialize assets manager
+        new \Pagifye\ElementorWidgets\Assets_Manager();
+
+        // Initialize widgets loader (replaces manual widget registration)
+        new \Pagifye\ElementorWidgets\Widgets_Loader();
     }
 
     /**
@@ -222,22 +258,6 @@ final class Pagifye_Elementor_Widgets {
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
     }
 
-    /**
-     * Initialize Widgets
-     *
-     * Include widgets files and register them
-     *
-     * @since 1.0.0
-     * @access public
-     */
-    public function init_widgets() {
-        // TODO: Include widget files here
-        // Example:
-        // require_once(__DIR__ . '/widgets/hero/class-hero-01.php');
-        // \Elementor\Plugin::instance()->widgets_manager->register(new \Pagifye_Hero_01());
-
-        // Widget files will be loaded here once they are created
-    }
 
     /**
      * Register Widget Categories
