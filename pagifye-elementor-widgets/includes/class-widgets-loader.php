@@ -47,9 +47,9 @@ class Widgets_Loader {
 			// Test widget (remove after Phase 1 complete)
 			'test' => 'Test_Widget',
 
-			// Phase 2 - Priority Widgets (commented out for now)
+			// Phase 2 - Priority Widgets
+			'hero-01'         => 'Hero_01',         // ✓ Implemented
 			// 'navigation-01'   => 'Navigation_01',  // Coming soon
-			// 'hero-01'         => 'Hero_01',         // Coming soon
 			// 'pricing-01'      => 'Pricing_01',      // Coming soon
 			// 'faq-01'          => 'FAQ_01',          // Coming soon
 			// 'testimonial-02'  => 'Testimonial_02',  // Coming soon
