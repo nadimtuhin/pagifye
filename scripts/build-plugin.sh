@@ -167,15 +167,67 @@ remove_dev_files() {
 
 # Minify CSS and JS (if available)
 minify_assets() {
-    print_step "Checking for minification..."
+    print_step "Minifying assets..."
 
-    # Check if npm is available
-    if command -v npm &> /dev/null; then
-        print_warning "Minification not implemented yet. Add to future version."
-        # TODO: Add minification logic here
-        # npm run build:production
+    local minified_count=0
+    local total_saved=0
+
+    # Check if minification tools are available
+    if ! command -v terser &> /dev/null || ! command -v cleancss &> /dev/null; then
+        print_warning "Minification tools not found. Install with: npm install -g terser clean-css-cli"
+        return
+    fi
+
+    # Minify JavaScript files
+    while IFS= read -r js_file; do
+        if [[ ! "$js_file" =~ \.min\.js$ ]]; then
+            local dir=$(dirname "$js_file")
+            local filename=$(basename "$js_file" .js)
+            local minified="$dir/$filename.min.js"
+
+            # Get original size
+            local original_size=$(wc -c < "$js_file")
+
+            # Minify
+            if terser "$js_file" -o "$minified" --compress --mangle 2>/dev/null; then
+                local minified_size=$(wc -c < "$minified")
+                local saved=$((original_size - minified_size))
+                total_saved=$((total_saved + saved))
+                minified_count=$((minified_count + 1))
+                print_success "Minified: $(basename "$js_file") (saved ${saved} bytes)"
+            else
+                print_warning "Failed to minify: $(basename "$js_file")"
+            fi
+        fi
+    done < <(find "$BUILD_DIR" -name "*.js" -type f 2>/dev/null)
+
+    # Minify CSS files
+    while IFS= read -r css_file; do
+        if [[ ! "$css_file" =~ \.min\.css$ ]]; then
+            local dir=$(dirname "$css_file")
+            local filename=$(basename "$css_file" .css)
+            local minified="$dir/$filename.min.css"
+
+            # Get original size
+            local original_size=$(wc -c < "$css_file")
+
+            # Minify
+            if cleancss -o "$minified" "$css_file" 2>/dev/null; then
+                local minified_size=$(wc -c < "$minified")
+                local saved=$((original_size - minified_size))
+                total_saved=$((total_saved + saved))
+                minified_count=$((minified_count + 1))
+                print_success "Minified: $(basename "$css_file") (saved ${saved} bytes)"
+            else
+                print_warning "Failed to minify: $(basename "$css_file")"
+            fi
+        fi
+    done < <(find "$BUILD_DIR" -name "*.css" -type f 2>/dev/null)
+
+    if [ $minified_count -gt 0 ]; then
+        print_success "Minified $minified_count file(s), saved ${total_saved} bytes total"
     else
-        print_warning "npm not found, skipping minification"
+        print_warning "No files to minify"
     fi
 }
 
