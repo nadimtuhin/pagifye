@@ -44,3 +44,4 @@ temp/
 # Docker
 .docker/
 docker-compose.override.yml
+.phpunit.result.cache

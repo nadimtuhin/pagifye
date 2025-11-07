@@ -7,7 +7,7 @@ services:
     container_name: pagifye-wordpress-dev
     restart: unless-stopped
     ports:
-      - "8000:80"
+      - "8080:80"
     environment:
       WORDPRESS_DB_HOST: mysql-dev:3306
       WORDPRESS_DB_NAME: ${MYSQL_DEV_DATABASE:-wordpress_dev}
@@ -22,7 +22,7 @@ services:
         define('WP_ENVIRONMENT_TYPE', 'development');
     volumes:
       # Plugin source code (bind mount for live editing)
-      - ./plugin:/var/www/html/wp-content/plugins/pagifye-elementor-widgets:delegated
+      - ./pagifye-elementor-widgets:/var/www/html/wp-content/plugins/pagifye-elementor-widgets:delegated
       # WordPress data persistence
       - wp_dev_data:/var/www/html
       # Custom PHP configuration
@@ -85,7 +85,7 @@ services:
         define('WP_ENVIRONMENT_TYPE', 'development');
     volumes:
       # Plugin source (read-only for testing)
-      - ./plugin:/var/www/html/wp-content/plugins/pagifye-elementor-widgets:ro
+      - ./pagifye-elementor-widgets:/var/www/html/wp-content/plugins/pagifye-elementor-widgets:ro
       - wp_test_data:/var/www/html
     depends_on:
       mysql-test:
@@ -128,7 +128,7 @@ services:
     container_name: pagifye-phpmyadmin
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "8081:80"
     environment:
       PMA_HOST: mysql-dev
       PMA_PORT: 3306
@@ -149,7 +149,7 @@ services:
     working_dir: /app
     volumes:
       - ./tailwind:/app:delegated
-      - ./plugin/assets:/app/dist:delegated
+      - ./pagifye-elementor-widgets/assets:/app/dist:delegated
       - node_modules:/app/node_modules
     environment:
       - NODE_ENV=${NODE_ENV:-development}
