@@ -8,7 +8,7 @@
 /**
  * Test plugin activation and basic functionality
  */
-class Test_Plugin_Activation extends WP_UnitTestCase {
+class Test_Plugin_Activation extends \PHPUnit\Framework\TestCase {
 
 	/**
 	 * Test plugin is activated

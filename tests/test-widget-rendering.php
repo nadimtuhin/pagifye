@@ -8,7 +8,7 @@
 /**
  * Test widgets render correctly
  */
-class Test_Widget_Rendering extends WP_UnitTestCase {
+class Test_Widget_Rendering extends \PHPUnit\Framework\TestCase {
 
 	/**
 	 * Test Navigation-01 widget renders
