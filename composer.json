@@ -1,0 +1,23 @@
+{
+    "name": "pagifye/elementor-widgets-project",
+    "description": "Pagifye Elementor Widgets - Project Root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "yoast/phpunit-polyfills": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pagifye\\ElementorWidgets\\": "pagifye-elementor-widgets/includes/",
+            "Pagifye\\ElementorWidgets\\Widgets\\": "pagifye-elementor-widgets/widgets/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-html coverage"
+    }
+}
