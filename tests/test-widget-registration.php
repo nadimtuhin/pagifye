@@ -8,7 +8,7 @@
 /**
  * Test all widgets are properly registered
  */
-class Test_Widget_Registration extends WP_UnitTestCase {
+class Test_Widget_Registration extends \PHPUnit\Framework\TestCase {
 
 	/**
 	 * List of all expected widgets

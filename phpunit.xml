@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit
-	bootstrap="vendor/autoload.php"
+	bootstrap="tests/mock-bootstrap.php"
 	backupGlobals="false"
 	colors="true"
 	convertErrorsToExceptions="true"
@@ -8,8 +8,27 @@
 	convertWarningsToExceptions="true"
 	>
 	<testsuites>
-		<testsuite name="Setup Verification">
+		<testsuite name="Unit Tests">
 			<file>tests/test-setup-verification.php</file>
+			<file>tests/test-assets-manager.php</file>
+			<file>tests/test-base-widget.php</file>
+			<file>tests/test-widgets-loader.php</file>
+			<file>tests/test-all-widgets.php</file>
+			<file>tests/test-hero-widgets.php</file>
+			<file>tests/test-navigation-widgets.php</file>
+			<file>tests/test-pricing-widgets.php</file>
+			<file>tests/test-faq-widgets.php</file>
+			<file>tests/test-testimonial-widgets.php</file>
+			<file>tests/test-remaining-widgets.php</file>
 		</testsuite>
 	</testsuites>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">pagifye-elementor-widgets</directory>
+			<exclude>
+				<directory suffix=".php">pagifye-elementor-widgets/vendor</directory>
+				<directory suffix=".php">tests</directory>
+			</exclude>
+		</whitelist>
+	</filter>
 </phpunit>
