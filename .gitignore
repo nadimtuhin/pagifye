@@ -45,3 +45,6 @@ temp/
 .docker/
 docker-compose.override.yml
 .phpunit.result.cache
+node_modules
+dist
+build
