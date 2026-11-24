@@ -10,33 +10,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      # The scraper's Chrome download is not needed to check the HTML.
+      PUPPETEER_SKIP_DOWNLOAD: 'true'
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-        continue-on-error: true
+          node-version: '24'
 
       - name: Install dependencies
-        run: |
-          if [ -f "package.json" ]; then
-            npm ci 2>/dev/null || npm install
-          fi
+        run: npm ci
 
       - name: Run lint
-        run: |
-          if [ -f "package.json" ] && npm run lint --if-present 2>/dev/null; then
-            echo "Lint passed"
-          else
-            echo "No lint script or lint skipped"
-          fi
+        run: npm run lint --if-present
 
-      - name: Run tests
-        run: |
-          if [ -f "package.json" ] && npm test --if-present 2>/dev/null; then
-            echo "Tests passed"
-          else
-            echo "No test script or tests skipped"
-          fi
+      - name: Validate HTML and run axe-core accessibility checks
+        run: npm test

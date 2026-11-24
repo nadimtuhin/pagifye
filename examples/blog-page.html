@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Example blog page built from Pagifye Tailwind CSS components: navigation, blog post grid and contact form.">
   <title>Blog Page - Pagifye Components Example</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -41,7 +42,7 @@
 
   <!-- Navigation Component (root_navigation-01) -->
   <section class="min-h-screen">
-    <header class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
+    <header role="banner" class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
       <div class="container flex items-center lg:justify-between">
         <a href="landing-page.html">
           <img src="https://static.pagifye.com/root/images/navbar/root-ui-white-logo.svg" alt="logo">
@@ -73,30 +74,32 @@
         </nav>
 
         <div class="flex gap-6 max-lg:hidden">
-          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+          <button type="button" class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
             <span>Sign In</span>
           </button>
-          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+          <button type="button" class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
             <span>Get Started</span>
           </button>
         </div>
       </div>
 
       <div x-data="{ isOpen: false }" class="flex lg:hidden">
-        <button class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
+        <button type="button" class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
           Get Started
         </button>
-        <button @click="isOpen = !isOpen" class="relative z-10">
+        <button type="button" @click="isOpen = !isOpen" class="relative z-10">
           <img src="https://static.pagifye.com/root/images/navbar/burger-menu-white.svg" alt="Menu" class="min-h-6 min-w-6 ">
         </button>
       </div>
     </header>
   </section>
 
+  <main>
+
   <!-- Blog Component (root_blog-05) -->
   <section class="bg-pgfy-gray-500 py-10 md:py-20 lg:py-28">
     <div class="container">
-      <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] mx-auto w-full max-w-[538px] text-center capitalize text-white">
+      <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] mx-auto w-full max-w-[538px] text-center text-white">
         <span>take a look at the latest </span>
         <span class="text-pgfy-primary-500">article and blog</span>
       </h1>
@@ -114,9 +117,9 @@
                 Leslie Alexander . 9 min
               </p>
 
-              <h4 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
+              <h2 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
                 10 Essential Strategies for Scaling Your Small Business in 2024
-              </h4>
+              </h2>
             </div>
           </div>
 
@@ -146,9 +149,9 @@
                 Leslie Alexander . 9 min
               </p>
 
-              <h4 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
+              <h2 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
                 How to Create a Bulletproof Financial Plan for Your Business
-              </h4>
+              </h2>
             </div>
           </div>
 
@@ -178,9 +181,9 @@
                 Leslie Alexander . 9 min
               </p>
 
-              <h4 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
+              <h2 class="mt-4 cursor-pointer text-xl font-bold md:text-2xl text-white group-hover:text-pgfy-gray-500">
                 Why Cash Flow Management is Key to Business Success
-              </h4>
+              </h2>
             </div>
           </div>
 
@@ -206,7 +209,7 @@
     <div class="container flex flex-col gap-8 md:gap-12 lg:gap-16">
       <div class="flex justify-between gap-8 max-md:flex-col lg:items-end">
         <div class="w-full space-y-5 md:max-w-[470px]">
-          <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] capitalize text-white">
+          <h1 class="text-4xl font-bold capitalize md:text-[40px] md:leading-[48px] lg:text-5xl lg:leading-[56px] text-white">
             <span>Contact</span>
             <span class="text-pgfy-primary-500">us</span>
           </h1>
@@ -227,7 +230,7 @@
             </div>
 
             <div class="space-y-2">
-              <h4 class="text-white text-lg md:text-xl font-bold">Send us an email:</h4>
+              <h2 class="text-white text-lg md:text-xl font-bold">Send us an email:</h2>
               <p class="text-white">hello@example.com</p>
             </div>
           </div>
@@ -241,7 +244,7 @@
             </div>
 
             <div class="space-y-2">
-              <h4 class="text-white text-lg md:text-xl font-bold">Give us a call:</h4>
+              <h2 class="text-white text-lg md:text-xl font-bold">Give us a call:</h2>
               <p class="text-white">+01222 222 222</p>
             </div>
           </div>
@@ -256,9 +259,9 @@
         </div>
 
         <div class="flex w-full flex-col gap-6 md:max-w-[470px] md:gap-8">
-          <h4 class="text-2xl font-bold capitalize text-white md:text-3xl">
+          <h2 class="text-2xl font-bold capitalize text-white md:text-3xl">
             Let's talk with us
-          </h4>
+          </h2>
 
           <form action="#" method="post" class="space-y-4">
             <div class="flex flex-col gap-1.5">
@@ -276,7 +279,7 @@
               <textarea name="message" id="message" placeholder="Enter your message" rows="5" cols="5" class="rounded-lg border bg-transparent focus-visible:border-pgfy-primary-500 focus-visible:outline-none p-3 border-white/15 text-white"></textarea>
             </div>
 
-            <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full !mt-8 w-full px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+            <button type="submit" class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full !mt-8 w-full px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
               <span>Send Message</span>
             </button>
           </form>
@@ -284,6 +287,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
 </body>
 </html>
