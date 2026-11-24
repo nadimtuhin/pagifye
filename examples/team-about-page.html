@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team & About Page - Pagifye Components Example</title>
+  <meta name="description" content="Example team and about page built from Pagifye Tailwind CSS components: navigation, content, team and awards.">
+  <title>Team &amp; About Page - Pagifye Components Example</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
@@ -41,7 +42,7 @@
 
   <!-- Navigation Component (root_navigation-01) -->
   <section class="min-h-screen">
-    <header class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
+    <header role="banner" class="relative flex items-center justify-between py-4 font-medium max-lg:pr-4 bg-pgfy-gray-500 text-white">
       <div class="container flex items-center lg:justify-between">
         <a href="landing-page.html">
           <img src="https://static.pagifye.com/root/images/navbar/root-ui-white-logo.svg" alt="logo">
@@ -73,25 +74,27 @@
         </nav>
 
         <div class="flex gap-6 max-lg:hidden">
-          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
+          <button type="button" class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full border text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 border-pgfy-primary-500 text-white hover:bg-pgfy-primary-500 hover:text-pgfy-gray-400">
             <span>Sign In</span>
           </button>
-          <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+          <button type="button" class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full sm:w-max px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
             <span>Get Started</span>
           </button>
         </div>
       </div>
 
       <div x-data="{ isOpen: false }" class="flex lg:hidden">
-        <button class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
+        <button type="button" class="mr-4 select-none text-nowrap rounded-full px-4 py-1 text-base font-bold bg-pgfy-primary-500 text-pgfy-gray-500 transition duration-300 ease-in-out hover:bg-pgfy-primary-600">
           Get Started
         </button>
-        <button @click="isOpen = !isOpen" class="relative z-10">
+        <button type="button" @click="isOpen = !isOpen" class="relative z-10">
           <img src="https://static.pagifye.com/root/images/navbar/burger-menu-white.svg" alt="Menu" class="min-h-6 min-w-6 ">
         </button>
       </div>
     </header>
   </section>
+
+  <main>
 
   <!-- Hero Section for About -->
   <section class="bg-pgfy-gray-500 py-10 md:pb-20 md:pt-16">
@@ -158,7 +161,7 @@
               Alex Younes
             </p>
             <p class="text-white/90">
-              Founder & CEO
+              Founder &amp; CEO
             </p>
           </div>
 
@@ -275,7 +278,7 @@
           </p>
 
           <div>
-            <button class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full mt-4 px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
+            <button type="button" class="group flex select-none items-center justify-center gap-1 text-nowrap rounded-full text-base font-bold transition duration-300 ease-in-out max-lg:w-full mt-4 px-8 py-3 bg-pgfy-primary-500 text-pgfy-gray-500 hover:bg-pgfy-primary-600">
               <span>See what they're saying</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="text-pgfy-gray-500" xmlns="http://www.w3.org/2000/svg" class="transition-transform duration-300 ease-in-out group-hover:translate-x-1">
                 <path d="M17.5383 10.6635L11.9133 16.2885C11.7372 16.4647 11.4983 16.5636 11.2492 16.5636C11.0001 16.5636 10.7613 16.4647 10.5852 16.2885C10.409 16.1124 10.3101 15.8736 10.3101 15.6245C10.3101 15.3754 10.409 15.1365 10.5852 14.9604L14.6094 10.9378H3.125C2.87636 10.9378 2.6379 10.839 2.46209 10.6632C2.28627 10.4874 2.1875 10.2489 2.1875 10.0003C2.1875 9.75162 2.28627 9.51316 2.46209 9.33735C2.6379 9.16153 2.87636 9.06276 3.125 9.06276H14.6094L10.5867 5.03776C10.4106 4.86164 10.3117 4.62277 10.3117 4.3737C10.3117 4.12462 10.4106 3.88575 10.5867 3.70963C10.7628 3.53351 11.0017 3.43457 11.2508 3.43457C11.4999 3.43457 11.7387 3.53351 11.9148 3.70963L17.5398 9.33463C17.6273 9.42185 17.6966 9.52547 17.7438 9.63955C17.7911 9.75364 17.8153 9.87593 17.8152 9.99941C17.815 10.1229 17.7905 10.2451 17.743 10.3591C17.6955 10.4731 17.6259 10.5765 17.5383 10.6635Z" fill="#0F2C24"></path>
@@ -311,6 +314,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
 </body>
 </html>

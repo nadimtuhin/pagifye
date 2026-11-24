@@ -8,7 +8,8 @@
     "scrape": "node scraper/scraper.js",
     "scrape:single": "node scraper/scraper-single.js",
     "build": "bash scripts/build-plugin.sh",
-    "build:keep": "bash scripts/build-plugin.sh --keep-build"
+    "build:keep": "bash scripts/build-plugin.sh --keep-build",
+    "test": "node scripts/check-html.mjs"
   },
   "keywords": [
     "tailwind",
@@ -26,5 +27,10 @@
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^17.2.3",
     "puppeteer": "^21.6.0"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.1",
+    "html-validate": "^11.21.1",
+    "jsdom": "^31.0.1"
   }
 }
